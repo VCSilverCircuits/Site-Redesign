@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 15% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 15% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 210 100% 56%;
+    --primary-foreground: 220 20% 6%;
+    --primary-glow: 210 100% 70%;
+
+    --secondary: 215 15% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 15% 15%;
+    --muted-foreground: 215 10% 60%;
+
+    --accent: 25 95% 58%;
+    --accent-foreground: 220 20% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 20% 20%;
+    --input: 215 20% 18%;
+    --ring: 210 100% 56%;
+
+    --silver: 210 8% 85%;
+    --silver-dark: 210 8% 60%;
+    --silver-light: 210 8% 95%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210, 100%, 56%), hsl(210, 100%, 70%));
+    --gradient-tech: linear-gradient(135deg, hsl(220, 20%, 6%), hsl(215, 15%, 12%));
+    --gradient-silver: linear-gradient(135deg, hsl(210, 8%, 85%), hsl(210, 8%, 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(220, 20%, 6%) 0%, hsl(215, 15%, 10%) 50%, hsl(210, 100%, 56%) 100%);
+
+    --shadow-tech: 0 10px 40px -10px hsl(210 100% 56% / 0.3);
+    --shadow-glow: 0 0 30px hsl(210 100% 70% / 0.4);
+    --shadow-card: 0 4px 20px hsl(220 20% 6% / 0.3);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 210 100% 70%;
+
+    --secondary: 210 8% 90%;
+    --secondary-foreground: 220 20% 10%;
+
+    --muted: 210 8% 95%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 25 95% 58%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 8% 85%;
+    --input: 210 8% 88%;
+    --ring: 210 100% 56%;
+
+    --silver: 210 8% 85%;
+    --silver-dark: 210 8% 60%;
+    --silver-light: 210 8% 95%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(210, 100%, 56%), hsl(210, 100%, 70%));
+    --gradient-tech: linear-gradient(135deg, hsl(0, 0%, 98%), hsl(210, 8%, 95%));
+    --gradient-silver: linear-gradient(135deg, hsl(210, 8%, 85%), hsl(210, 8%, 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 98%) 0%, hsl(210, 8%, 95%) 50%, hsl(210, 100%, 56%) 100%);
+
+    --shadow-tech: 0 10px 40px -10px hsl(210 100% 56% / 0.2);
+    --shadow-glow: 0 0 30px hsl(210 100% 70% / 0.3);
+    --shadow-card: 0 4px 20px hsl(220 20% 10% / 0.1);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  .tech-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .tech-fade-in {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .circuit-bg {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(210 100% 56% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(25 95% 58% / 0.1) 0%, transparent 50%);
+  }
+}
