@@ -37,8 +37,11 @@ jobs:
           # clear old contents
           rm -rf ./*
 
+          # run ls
+          ls -a
+
           # copy new build files
-          cp -r ../dist/* .
+          cp -r ./dist/* .
 
           # commit and push
           git add -A
