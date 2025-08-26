@@ -10,16 +10,10 @@ import Footer from "@/components/Footer";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Hunter",
-      image: hunterImage,
-      role: "Designer & Driver & Builder",
-      bio: "Hi, my name is Hunter, a homeschooled Sophomore in high school attending classes at Western Nevada College pursuing a degree in Machine Tool Technology. I specialize in organization, designing in Fusion 360, business, building, and a little programming. I go to all events that I can go to, and I help anywhere that I am needed. I love FIRST because it has taught me so much, especially about using Fusion 360 for designing robot parts and seeing them come to life with my 3D printer. The best part is the friendships I have made and the opportunity to interact with the other teams and compete with them. I would love to be a Designer or a Manufacturing Engineer someday."
-    },
-        {
-      name: "Shaylee",
-      image: shayleeImage,
-      role: "Backup Driver",
-      bio: "No bio available at this time."
+      name: "Aiden",
+      image: aidenImage,
+      role: "Software Developer",
+      bio: "Hi! I'm Aiden I'm a Senior at Virginia City High School and am also studying for a degree in electrical engineering at Western Nevada College this is my third year on the team and I'm very hyped for this season. I love software development and programming and am always up for a challenge recently I've taken intrest in cars and love fixing them. I'm so excited for this season and am so proud of how much I've learned"
     },
     {
       name: "Tucker",
@@ -28,10 +22,16 @@ const Team = () => {
       bio: "Hi! My name is Tucker. I'm a junior in high school, and this is my second season with the team. I'm super pumped- its going to be a great season with the team. Me and my 3D printer continue to be besties. We've had our highs and lows, but true friendship is forever. I'm studying to go into electrical engineering at Western Nevada College! I'm a contrarian; But if you say so, then I don't."
     },
     {
-      name: "Aiden",
-      image: aidenImage,
-      role: "Software Developer",
-      bio: "Hi! I'm Aiden I'm a Senior at Virginia City High School and am also studying for a degree in electrical engineering at Western Nevada College this is my third year on the team and I'm very hyped for this season. I love software development and programming and am always up for a challenge recently I've taken intrest in cars and love fixing them. I'm so excited for this season and am so proud of how much I've learned"
+      name: "Hunter",
+      image: hunterImage,
+      role: "Designer & Driver & Builder",
+      bio: "Hi, my name is Hunter, a homeschooled Sophomore in high school attending classes at Western Nevada College pursuing a degree in Machine Tool Technology. I specialize in organization, designing in Fusion 360, business, building, and a little programming. I go to all events that I can go to, and I help anywhere that I am needed. I love FIRST because it has taught me so much, especially about using Fusion 360 for designing robot parts and seeing them come to life with my 3D printer. The best part is the friendships I have made and the opportunity to interact with the other teams and compete with them. I would love to be a Designer or a Manufacturing Engineer someday."
+    },
+    {
+      name: "Aaron",
+      image: aaronImage,
+      role: "IT & Hardware & Builder",
+      bio: "Hey there! I'm Aaron, and I'm excited to be joining VC Silver Circuits this year (2026 Season). I specialize in Information Technology, computer repairs, building, software development, and networking. I've always loved working with technology even when it's fixing a computer, writing code, or building robots and computers from the ground up. Before joining VC Silver Circuits, I was part of URSA Major, where I gained a ton of experience in robotics and teamwork. I'm looking forward to bringing my skills to the team, learning even more about robotics, and challenging new challenges alongside my teammates. I'm excited to contribute wherever I can and grow this season!"
     },
     {
       name: "William",
@@ -40,12 +40,13 @@ const Team = () => {
       bio: "I'm William, I joined the team in 2023. I am a sophomore in high school, and I am looking forward to learning about more robotics. So far, I have learned a lot about things like 3D printing, building, designing, and planning. Last year I learned a lot about the design process of designing a working robot. I am hoping we will design a cool robot this year."
     },
     {
-      name: "Aaron",
-      image: aaronImage,
-      role: "IT & Hardware & Builder",
-      bio: "Hey there! I'm Aaron, and I'm excited to be joining VC Silver Circuits this year (2026 Season). I specialize in Information Technology, computer repairs, building, software development, and networking. I've always loved working with technology even when it's fixing a computer, writing code, or building robots and computers from the ground up. Before joining VC Silver Circuits, I was part of URSA Major, where I gained a ton of experience in robotics and teamwork. I'm looking forward to bringing my skills to the team, learning even more about robotics, and challenging new challenges alongside my teammates. I'm excited to contribute wherever I can and grow this season!"
+      name: "Shaylee",
+      image: shayleeImage,
+      role: "Backup Driver",
+      bio: "No bio available at this time."
     }
   ];
+
 
   const coaches = [
     {
