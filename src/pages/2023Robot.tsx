@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play } from "lucide-react";
-
+import Footer from "@/components/Footer";
 import powerPlayImage1 from "@/assets/RobotPhotos/power-play-1.jpg";
 import powerPlayImage2 from "@/assets/RobotPhotos/power-play-2.jpg";
 
@@ -16,7 +16,7 @@ const PowerPlayRobot = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20 pb-12">
+    <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: EVE</h1>
@@ -172,6 +172,7 @@ const PowerPlayRobot = () => {
           </Card>
         </section>
       </div>
+      <Footer />
     </div>
   );
 };

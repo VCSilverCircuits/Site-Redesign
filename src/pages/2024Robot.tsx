@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play } from "lucide-react";
-
+import Footer from "@/components/Footer";
 import robot1Image from "@/assets/RobotPhotos/centerstage-robot-1.jpg";
 import robot2Image from "@/assets/RobotPhotos/centerstage-robot-2.png";
 
@@ -24,7 +24,7 @@ const Robot = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20 pb-12">
+    <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: Center Stage</h1>
@@ -183,7 +183,9 @@ const Robot = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
+
   );
 };
 

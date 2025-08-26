@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Play } from "lucide-react";
+import { ExternalLink, Play, Youtube, Facebook, Instagram } from "lucide-react"; 
+import Footer from "@/components/Footer";
 
 const Media = () => {
     const mediaItems = [
@@ -83,14 +83,31 @@ const Media = () => {
     ];
 
     return (
-        <div className="min-h-screen pt-20 pb-12">
+        <div className="min-h-screen pt-20 tech-fade-in">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
                     <h1 className="text-5xl font-bold mb-6 gradient-text">Media & Videos</h1>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                         Explore our team’s journey through videos from past and current competitions.
                     </p>
+                </div>
 
+                <div className="text-center mb-12 space-y-4">
+                    <h2 className="text-3xl font-semibold text-primary">Follow Us</h2>
+                    <div className="flex justify-center space-x-6 mt-2">
+                        <a href="https://www.youtube.com/@VCSilverCircuitsFTC16158" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-muted-foreground hover:text-primary-glow transition-colors">
+                            <Youtube className="h-6 w-6" />
+                            YouTube
+                        </a>
+                        <a href="https://www.facebook.com/VCSilverCircuits" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-muted-foreground hover:text-primary-glow transition-colors">
+                            <Facebook className="h-6 w-6" />
+                            Facebook
+                        </a>
+                        <a href="https://www.instagram.com/vcsilvercircuits" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-muted-foreground hover:text-primary-glow transition-colors">
+                            <Instagram className="h-6 w-6" />
+                            Instagram
+                        </a>
+                    </div>
                 </div>
 
                 <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
@@ -115,8 +132,9 @@ const Media = () => {
                     ))}
                 </section>
             </div>
+            <Footer />
         </div>
+        
     );
 };
-
 export default Media;

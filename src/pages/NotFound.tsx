@@ -11,9 +11,9 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-200 dark:from-gray-900 dark:to-gray-800 p-6 transition-colors duration-300">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-200 dark:from-gray-300 dark:to-gray-400 p-6 transition-colors duration-300">
       <motion.div
-        className="bg-white dark:bg-gray-950 shadow-xl rounded-2xl p-10 max-w-lg w-full text-center transition-colors duration-300"
+        className="bg-white dark:bg-gray-100 shadow-xl rounded-2xl p-10 max-w-lg w-full text-center transition-colors duration-300"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

@@ -1,10 +1,10 @@
 import TeamMemberCard from "@/components/TeamMemberCard";
-
 import hunterImage from "@/assets/TeamMembers/hunter.jpg";
 import tuckerImage from "@/assets/TeamMembers/tucker.jpg";
 import aidenImage from "@/assets/TeamMembers/aiden.jpg";
 import williamImage from "@/assets/TeamMembers/william.jpg";
 import aaronImage from "@/assets/placeholder.svg";
+import Footer from "@/components/Footer";
 
 const Team = () => {
   const teamMembers = [
@@ -54,7 +54,7 @@ const Team = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20 pb-12">
+    <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Meet Our Team</h1>
@@ -96,6 +96,7 @@ const Team = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 };

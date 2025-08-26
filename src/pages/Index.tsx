@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Trophy, Users, Zap, ExternalLink, Heart } from "lucide-react";
-
+import Footer from "@/components/Footer";
 import teamHeroImage from "@/assets/TeamPhotos/team-hero.jpg";
 import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.jpg";
 import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.jpg";
@@ -31,7 +31,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen tech-fade-in">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -43,23 +43,23 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <Badge variant="secondary" className="mb-6 text-lg px-6 py-2">
-            FTC Team #16158
+          <Badge variant="secondary" className="mb-6 text-lg px-6 py-2 tech-fade-in">
+            We are FTC Team #16158
           </Badge>
           <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text tech-fade-in">
             VC Silver Circuits
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto tech-fade-in">
             Virginia City, Nevada
           </p>
-          <p className="text-lg text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed tech-fade-in">
             We are the VC Silver Circuits, a team participating in the FIRST Tech Challenge program. 
             Our team consists of six team members, two coaches, and one mentor, dedicated to pursuing 
             knowledge in robotics and engineering. We come from a small town in rural Nevada called 
             Virginia City, but our passion is big.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center tech-fade-in">
             <Button variant="hero" size="lg" asChild>
               <Link to="/team">Meet Our Team</Link>
             </Button>
@@ -170,13 +170,14 @@ const Index = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
               >
-                Learn More About FIRST
+                Learn More About FIRST and FIRST Tech Challenge
                 <ExternalLink className="h-5 w-5" />
               </a>
             </Button>
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

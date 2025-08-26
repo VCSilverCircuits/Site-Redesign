@@ -36,7 +36,7 @@ const Navigation = () => {
               VC Silver Circuits
             </div>
             <div className="text-sm text-muted-foreground hidden sm:block">
-              FTC #16158
+              #16158
             </div>
           </Link>
 

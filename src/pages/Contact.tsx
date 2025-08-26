@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Facebook, ExternalLink, Heart, Instagram, Phone } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import Footer from "@/components/Footer";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -47,7 +48,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20 pb-12">
+    <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Get In Touch</h1>
@@ -179,6 +180,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
