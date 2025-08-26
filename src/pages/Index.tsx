@@ -32,8 +32,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen tech-fade-in">
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
+<section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">        <div className="absolute inset-0">
           <img
             src={teamHeroImage}
             alt="VC Silver Circuits Team"
@@ -41,7 +40,7 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/50" />
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 text-center">
           <Badge variant="secondary" className="mb-6 text-lg px-6 py-2 tech-fade-in">
             We are FTC Team #16158
@@ -53,12 +52,12 @@ const Index = () => {
             Virginia City, Nevada
           </p>
           <p className="text-lg text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed tech-fade-in">
-            We are the VC Silver Circuits, a team participating in the FIRST Tech Challenge program. 
-            Our team consists of six team members, two coaches, and one mentor, dedicated to pursuing 
-            knowledge in robotics and engineering. We come from a small town in rural Nevada called 
+            We are the VC Silver Circuits, a team participating in the FIRST Tech Challenge program.
+            Our team consists of six team members, two coaches, and one mentor, dedicated to pursuing
+            knowledge in robotics and engineering. We come from a small town in rural Nevada called
             Virginia City, but our passion is big.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center tech-fade-in">
             <Button variant="hero" size="lg" asChild>
               <Link to="/team">Meet Our Team</Link>
@@ -75,9 +74,9 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8 text-primary">Our Mission</h2>
             <p className="text-xl leading-relaxed text-muted-foreground mb-12">
-              We strive to share our knowledge and passions with others, to create a future of STEM excellence. 
-              This season, our focus is clear: <span className="text-primary font-semibold">win at the Nevada State Championship</span> and 
-              aim for the <span className="text-accent font-semibold">Worldwide Championship</span>. Our goal isn't just to participate 
+              We strive to share our knowledge and passions with others, to create a future of STEM excellence.
+              This season, our focus is clear: <span className="text-primary font-semibold">win at the Nevada State Championship</span> and
+              aim for the <span className="text-accent font-semibold">Worldwide Championship</span>. Our goal isn't just to participate
               but to excel, reaching the finals to showcase our team's dedication and talent.
             </p>
             <div className="text-2xl font-bold text-accent">
@@ -137,7 +136,7 @@ const Index = () => {
             <Heart className="h-16 w-16 text-accent mx-auto mb-8" />
             <h2 className="text-4xl font-bold mb-8 text-primary">Support Our Journey</h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Help us continue our robotics journey and reach new heights. Your support helps us compete, 
+              Help us continue our robotics journey and reach new heights. Your support helps us compete,
               learn, and inspire the next generation of STEM leaders.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -160,7 +159,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8 text-primary">About FIRST Tech Challenge</h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              FIRST Tech Challenge is an extracurricular program for students in grades 7–12 to learn about the 
+              FIRST Tech Challenge is an extracurricular program for students in grades 7–12 to learn about the
               fields of science, technology, engineering, and math (STEM) through hands-on learning in the field of robotics.
             </p>
             <Button variant="outline" size="lg" asChild>
