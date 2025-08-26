@@ -165,7 +165,7 @@ const PowerPlayRobot = () => {
               </div>
               <div className="mt-8 p-4 bg-accent/10 rounded-xl border border-accent/20">
                 <p className="text-sm text-muted-foreground italic">
-                  Last Updated: February 26, 2025
+                  Last Updated: August 25, 2025
                 </p>
               </div>
             </CardContent>
