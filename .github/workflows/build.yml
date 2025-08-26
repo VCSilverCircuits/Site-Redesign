@@ -23,7 +23,8 @@ jobs:
 
       - name: Build project
         run: npm run build
-
+      - name: Run tests
+        run: ls -a
       - name: Deploy dist to gh-pages
         run: |
           # configure git
@@ -36,9 +37,6 @@ jobs:
 
           # clear old contents
           rm -rf ./*
-
-          # run ls
-          ls -a
 
           # copy new build files
           cp -r ./dist/* .
