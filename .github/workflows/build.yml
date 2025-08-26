@@ -15,6 +15,7 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
+        
         with:
           node-version: 20
 
@@ -23,23 +24,28 @@ jobs:
 
       - name: Build project
         run: npm run build
+
       - name: Run tests
-        run: ls -a
+        run: ls
+
       - name: Deploy dist to gh-pages
         run: |
           # configure git
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # clone gh-pages branch (or create if missing)
+          # save dist folder temporarily
+          cp -r ./dist /tmp/dist
+
+          # switch to gh-pages branch (or create it)
           git fetch origin gh-pages || true
           git checkout gh-pages || git checkout --orphan gh-pages
 
           # clear old contents
           rm -rf ./*
 
-          # copy new build files
-          cp -r ./dist/* .
+          # copy dist back
+          cp -r /tmp/dist/* .
 
           # commit and push
           git add -A
