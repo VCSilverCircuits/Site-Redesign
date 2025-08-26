@@ -15,7 +15,7 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
-        
+
         with:
           node-version: 20
 
@@ -29,6 +29,8 @@ jobs:
         run: ls
 
       - name: Deploy dist to gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # configure git
           git config --global user.name "github-actions[bot]"
@@ -47,7 +49,9 @@ jobs:
           # copy dist back
           cp -r /tmp/dist/* .
 
-          # commit and push
+          # commit changes
           git add -A
           git commit -m "Deploy from ${GITHUB_SHA}" || echo "No changes to commit"
-          git push origin gh-pages
+
+          # push using the GitHub Actions token
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git gh-pages
