@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -28,30 +30,8 @@ jobs:
       - name: Run tests
         run: ls
 
-      - name: Deploy dist to gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # configure git
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          # save dist folder temporarily
-          cp -r ./dist /tmp/dist
-
-          # switch to gh-pages branch (or create it)
-          git fetch origin gh-pages || true
-          git checkout gh-pages || git checkout --orphan gh-pages
-
-          # clear old contents
-          rm -rf ./*
-
-          # copy dist back
-          cp -r /tmp/dist/* .
-
-          # commit changes
-          git add -A
-          git commit -m "Deploy from ${GITHUB_SHA}" || echo "No changes to commit"
-
-          # push using the GitHub Actions token
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
