@@ -3,37 +3,39 @@ name: Deploy to Server 🚀
 on:
   push:
     branches:
-      - main 
+      - main
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write 
-  
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
+      # Checkout the repo
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           persist-credentials: true
 
+      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
-
         with:
           node-version: 20
 
+      # Install dependencies and build
       - name: Install dependencies
         run: npm install
 
       - name: Build project
         run: npm run build
 
-      - name: Run tests
-        run: ls
+      # Verify dist folder exists
+      - name: List dist folder
+        run: ls -la ./dist
 
+      # Deploy to gh-pages branch
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
