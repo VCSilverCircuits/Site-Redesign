@@ -47,6 +47,11 @@ const Team = () => {
       bio: "Hello! My name is Michelle. This will be my sixth season coaching this team. Becoming a robotics coach was never on my bucket list, but over the years, it has become a way of life for my family and I. I cherish the friendships that I have made and enjoy seeing the \"ah-ha\" moments these kids have had over the years. I love the values the FIRST program teaches and the knowledge the kids have gained. When I am not coaching this team, I am running the office side of my husband's and my business or homeschooling my children. I enjoy all things outdoors: from hiking, paddleboarding, and snowmobiling to dirt bike riding. I am always game for an adventure."
     },
     {
+      name: "Coach Lisanne",
+      role: "Assistant Coach",
+      bio: "No bio available at this time."
+    },
+    {
       name: "Mentor Coen",
       role: "Technical Mentor",
       bio: "Hello! I'm Coen, a mentor of the VC Silver Circuits. Having recently graduated high school and subsequently graduated from the team, I have shifted my focus to helping the new and existing team members succeed in the program. I am aiming for a degree in mechanical engineering at UNR and hope to find a carrier with 3d design. this will be my 8th year with the program having done a single year of First Lego League with the VC Silver Bricks and 6 years of FIRST Tech Challenge. I help team members with 3D Modeling in Autodesk Fusion and with robot design strategy. I'm excited to see how the team does this upcoming season."
@@ -80,7 +85,7 @@ const Team = () => {
 
         <section>
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">Coaches & Mentors</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-8xl mx-auto">
             {coaches.map((coach, index) => (
               <div
                 key={index}
