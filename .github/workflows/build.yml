@@ -47,4 +47,3 @@ jobs:
           git add -A
           git commit -m "Deploy from ${GITHUB_SHA}" || echo "No changes to commit"
           git push origin gh-pages
-        working-directory: ${{ github.workspace }}
