@@ -138,7 +138,7 @@ const Index = () => {
                 viewport={{ once: true }}
               >
                 We are the VC Silver Circuits, a team participating in the FIRST
-                Tech Challenge program. Our team consists of six team members,
+                Tech Challenge program. Our team consists of seven team members,
                 two coaches, and one mentor, dedicated to pursuing knowledge in
                 robotics and engineering. We come from a small town in rural
                 Nevada called Virginia City, but our passion is big.

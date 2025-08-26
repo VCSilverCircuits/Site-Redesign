@@ -4,6 +4,7 @@ import tuckerImage from "@/assets/TeamMembers/tucker.jpg";
 import aidenImage from "@/assets/TeamMembers/aiden.jpg";
 import williamImage from "@/assets/TeamMembers/william.jpg";
 import aaronImage from "@/assets/placeholder.svg";
+import shayleeImage from "@/assets/placeholder.svg";
 import Footer from "@/components/Footer";
 
 const Team = () => {
@@ -13,6 +14,12 @@ const Team = () => {
       image: hunterImage,
       role: "Designer & Driver & Builder",
       bio: "Hi, my name is Hunter, a homeschooled Sophomore in high school attending classes at Western Nevada College pursuing a degree in Machine Tool Technology. I specialize in organization, designing in Fusion 360, business, building, and a little programming. I go to all events that I can go to, and I help anywhere that I am needed. I love FIRST because it has taught me so much, especially about using Fusion 360 for designing robot parts and seeing them come to life with my 3D printer. The best part is the friendships I have made and the opportunity to interact with the other teams and compete with them. I would love to be a Designer or a Manufacturing Engineer someday."
+    },
+        {
+      name: "Shaylee",
+      image: shayleeImage,
+      role: "Backup Driver",
+      bio: "No bio available at this time."
     },
     {
       name: "Tucker",
