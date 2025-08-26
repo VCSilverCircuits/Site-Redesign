@@ -123,7 +123,7 @@ const Navigation = () => {
                         asChild
                       >
                         <a
-                          href="https://www.vcsilvercircuits.com/center-stage-robot"
+                          href="/center-stage-robot"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -136,7 +136,7 @@ const Navigation = () => {
                         asChild
                       >
                         <a
-                          href="https://www.vcsilvercircuits.com/power-play-robot"
+                          href="/power-play-robot"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
