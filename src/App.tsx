@@ -46,6 +46,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/robot" element={<ITDRobot />} />
             <Route path="/into-the-deep-robot" element={<ITDRobot />} />
             <Route path="/center-stage-robot" element={<CSRobot />} />
             <Route path="/power-play-robot" element={<PPlayRobot />} />
