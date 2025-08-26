@@ -3,67 +3,51 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play } from "lucide-react";
 
-// Import robot images
-import robot1Image from "@/assets/robot-1.jpg";
-import robot2Image from "@/assets/robot-2.jpg";
+import powerPlayImage1 from "@/assets/RobotPhotos/power-play-1.jpg";
+import powerPlayImage2 from "@/assets/RobotPhotos/power-play-2.jpg";
 
-const Robot = () => {
+const PowerPlayRobot = () => {
   const stats = [
-    { label: "OPR", value: "172", description: "Lobster Cup Invitational" },
-    { label: "High Score", value: "401", description: "World Championship" },
-    { label: "Samples Auto", value: "6+0", description: "Sample auto performance" },
-    { label: "Specimens Auto", value: "0+5", description: "Specimen auto performance" },
-    { label: "Avg Samples", value: "15", description: "During tele-op practice" },
-    { label: "Avg Specimens", value: "9", description: "During tele-op practice" },
-    { label: "Hang Level", value: "3", description: "Maximum hang capability" }
-  ];
-
-  const previousStats = [
-    { label: "Samples Auto", value: "5+0", description: "V1 sample auto" },
-    { label: "Specimens Auto", value: "0+4", description: "V1 specimen auto" },
-    { label: "Avg Samples", value: "13", description: "V1 tele-op, high of 16" },
-    { label: "High Score", value: "318", description: "V1 no penalties" },
-    { label: "Hang Level", value: "2", description: "Fast level 2 hang" }
+    { label: "High Score (No Penalties)", value: "262", description: "Achieved during Power Play season" },
+    { label: "High Score (Solo)", value: "221", description: "Achieved during Power Play season" },
+    { label: "Autonomous", value: "5+1 cones + park", description: "High autonomous score of 80 points solo" },
+    { label: "Teleop", value: "18 cones", description: "Capable of scoring all 18 cones during teleop" },
+    { label: "Endgame", value: "Beacon scoring", description: "Simultaneous beacon and cone scoring" }
   ];
 
   return (
     <div className="min-h-screen pt-20 pb-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
-          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: Undertow</h1>
+          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: EVE</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Built for the 2024-2025 Into The Deep season, Undertow represents our team's dedication to engineering excellence and innovative design.
+            Built for the 2022–2023 Power Play season, EVE showcases our team's commitment to precision and performance.
           </p>
           <Badge variant="secondary" className="mt-4 text-lg px-4 py-2">
-            2024-2025 Into The Deep Season
+            2022–2023 Power Play Season
           </Badge>
         </div>
 
         <section className="mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
-              <img
-                src={robot1Image}
-                alt="Undertow Robot V2"
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-            <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
-              <img
-                src={robot2Image}
-                alt="Undertow Robot Competition"
-                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {[powerPlayImage1, powerPlayImage2].map((img, index) => (
+              <div key={index} className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
+                <img
+                  src={img}
+                  alt={`EVE Robot ${index + 1}`}
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            ))}
           </div>
         </section>
 
         <section className="mb-16">
           <Card className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
             <CardHeader>
-              <CardTitle className="text-3xl text-primary">Undertow V2 Performance</CardTitle>
+              <CardTitle className="text-3xl text-primary">EVE's Performance Highlights</CardTitle>
               <CardDescription className="text-lg">
-                Latest iteration with enhanced capabilities and record-breaking performance
+                A testament to our team's engineering excellence during the Power Play season
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -86,53 +70,44 @@ const Robot = () => {
         <section className="mb-16">
           <Card className="bg-gradient-tech border-border">
             <CardHeader>
-              <CardTitle className="text-2xl text-primary">Undertow V1 Legacy</CardTitle>
-              <CardDescription>
-                Previous iteration that laid the foundation for our current success
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {previousStats.map((stat, index) => (
-                  <div
-                    key={index}
-                    className="bg-card/30 rounded-xl p-6 border border-border/50"
-                  >
-                    <div className="text-2xl font-bold text-accent mb-2">{stat.value}</div>
-                    <div className="text-sm font-medium text-foreground mb-1">{stat.label}</div>
-                    <div className="text-xs text-muted-foreground">{stat.description}</div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </section>
-
-        <section className="mb-16">
-          <Card className="bg-gradient-tech border-border">
-            <CardHeader>
               <CardTitle className="text-2xl text-primary flex items-center gap-2">
                 <Play className="h-6 w-6" />
-                Robot in Action
+                EVE in Action
               </CardTitle>
               <CardDescription>
-                Watch our autonomous routine and competition performances
+                Watch EVE's autonomous routine and competition performances
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
                   <div>
-                    <h3 className="font-semibold text-foreground">5+0 Specimen Auto</h3>
-                    <p className="text-sm text-muted-foreground">VC Silver Circuits FTC - 848 subscribers</p>
+                    <h3 className="font-semibold text-foreground">Robot Reveal</h3>
                   </div>
                   <Button variant="hero" asChild>
-                    <a
-                      href="https://www.youtube.com/watch?v=Ug-gPDnumV8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
+                    <a href="https://www.youtube.com/watch?v=8Fio1rOuCQY" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      Watch on YouTube
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
+                  <div>
+                    <h3 className="font-semibold text-foreground">Nevada State Championship</h3>
+                  </div>
+                  <Button variant="hero" asChild>
+                    <a href="https://www.youtube.com/watch?v=bgVEpjuJn5c" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      Watch on YouTube
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
+                  <div>
+                    <h3 className="font-semibold text-foreground">Nevada State High Score 2023</h3>
+                  </div>
+                  <Button variant="hero" asChild>
+                    <a href="https://www.youtube.com/watch?v=KVGMkMSexqs" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                       Watch on YouTube
                       <ExternalLink className="h-4 w-4" />
                     </a>
@@ -165,7 +140,7 @@ const Robot = () => {
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Technical Achievements</CardTitle>
               <CardDescription>
-                Key milestones and capabilities of our robot design
+                Key milestones and capabilities of EVE's design
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -173,19 +148,18 @@ const Robot = () => {
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-accent">Autonomous Performance</h3>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>• Advanced 6+0 sample autonomous routine</li>
-                    <li>• Precision 0+5 specimen autonomous sequence</li>
-                    <li>• Consistent and reliable autonomous execution</li>
-                    <li>• Strategic scoring optimization</li>
+                    <li>• 5+1 cone autonomous routine with parking</li>
+                    <li>• High autonomous score of 80 points solo</li>
+                    <li>• Reliable and repeatable autonomous execution</li>
                   </ul>
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-accent">Competition Features</h3>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>• Level 3 hang capability for maximum points</li>
-                    <li>• High-capacity sample and specimen handling</li>
-                    <li>• Robust and reliable mechanical design</li>
-                    <li>• World Championship proven performance</li>
+                    <li>• Capable of scoring all 18 cones during teleop</li>
+                    <li>• Quick scoring on high, medium, or low junctions</li>
+                    <li>• Ability to pick up tipped-over cones during matches</li>
+                    <li>• Beacon scoring on any pole during endgame</li>
                   </ul>
                 </div>
               </div>
@@ -202,4 +176,4 @@ const Robot = () => {
   );
 };
 
-export default Robot;
+export default PowerPlayRobot;

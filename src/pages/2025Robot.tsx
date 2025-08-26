@@ -1,0 +1,220 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Play } from "lucide-react";
+
+import robot1Image from "@/assets/RobotPhotos/ITDRobot-1.jpg";
+import robot2Image from "@/assets/RobotPhotos/ITDRobot-2.jpg";
+
+const Robot = () => {
+  const stats = [
+    { label: "OPR", value: "172", description: "Lobster Cup Invitational" },
+    { label: "High Score", value: "442", description: "World Championship" },
+    { label: "Samples Auto", value: "6+0", description: "Sample Auto Performance" },
+    { label: "Specimens Auto", value: "0+5", description: "Specimen Auto Performance" },
+    { label: "Avg Samples", value: "15", description: "During Tele-OP Practice" },
+    { label: "Avg Specimens", value: "9", description: "During Tele-OP Practice" },
+    { label: "Hang Level", value: "3", description: "Maximum Hang Capability" }
+  ];
+
+  const previousStats = [
+    { label: "Samples Auto", value: "5+0", description: "Sample Auto" },
+    { label: "Specimens Auto", value: "0+4", description: "Specimen Auto" },
+    { label: "Avg Samples", value: "13", description: "Tele-OP High of 16" },
+    { label: "High Score", value: "318", description: "No Penalties" },
+    { label: "Hang Level", value: "2", description: "Fast Level 2 Hang" }
+  ];
+
+  return (
+    <div className="min-h-screen pt-20 pb-12">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
+          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: Undertow</h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Built for the 2024-2025 Into The Deep season, Undertow represents our team's dedication to engineering excellence and innovative design.
+          </p>
+          <Badge variant="secondary" className="mt-4 text-lg px-4 py-2">
+            2024-2025 Into The Deep Season
+          </Badge>
+        </div>
+
+        <section className="mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
+              <img
+                src={robot1Image}
+                alt="Undertow Robot V2"
+                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
+              <img
+                src={robot2Image}
+                alt="Undertow Robot Competition"
+                className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <Card className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
+            <CardHeader>
+              <CardTitle className="text-3xl text-primary">Undertow V2 Performance</CardTitle>
+              <CardDescription className="text-lg">
+                Latest iteration with enhanced capabilities and record-breaking performance
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {stats.map((stat, index) => (
+                  <div
+                    key={index}
+                    className="bg-card/50 rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-300"
+                  >
+                    <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                    <div className="text-sm font-medium text-foreground mb-1">{stat.label}</div>
+                    <div className="text-xs text-muted-foreground">{stat.description}</div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-16">
+          <Card className="bg-gradient-tech border-border">
+            <CardHeader>
+              <CardTitle className="text-3xl text-primary">Undertow V1 Legacy</CardTitle>
+              <CardDescription className="text-lg">
+                Previous iteration that laid the foundation for our current success
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {previousStats.map((stat, index) => (
+                  <div
+                    key={index}
+                    className="bg-card/30 rounded-xl p-6 border border-border/50"
+                  >
+                    <div className="text-2xl font-bold text-accent mb-2">{stat.value}</div>
+                    <div className="text-sm font-medium text-foreground mb-1">{stat.label}</div>
+                    <div className="text-xs text-muted-foreground">{stat.description}</div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-16">
+          <Card className="bg-gradient-tech border-border">
+            <CardHeader>
+              <CardTitle className="text-2xl text-primary flex items-center gap-2">
+                <Play className="h-6 w-6" />
+                Robots in Action
+              </CardTitle>
+              <CardDescription>
+                Watch our autonomous routine and competition performances
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
+                  <div>
+                    <h3 className="font-semibold text-foreground">5+0 Specimen Auto</h3>
+                  </div>
+                  <Button variant="hero" asChild>
+                    <a href="https://www.youtube.com/watch?v=Ug-gPDnumV8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      Watch on YouTube
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
+                  <div>
+                    <h3 className="font-semibold text-foreground">0+6 Sample Auto</h3>
+                  </div>
+                  <Button variant="hero" asChild>
+                    <a href="https://www.youtube.com/watch?v=lNuZh8ZRyjM" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      Watch on YouTube
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+                                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
+                  <div>
+                    <h3 className="font-semibold text-foreground">Nevada State Record with Undertow V1</h3>
+                  </div>
+                  <Button variant="hero" asChild>
+                    <a href="https://www.youtube.com/watch?v=Ug-gPDnumV8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      Watch on YouTube
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
+                  <div>
+                    <h3 className="font-semibold text-foreground">Team YouTube Channel</h3>
+                    <p className="text-sm text-muted-foreground">More videos and robot demonstrations</p>
+                  </div>
+                  <Button variant="outline" asChild>
+                    <a
+                      href="https://www.youtube.com/channel/UCDCrf8ckC8DoCEa3QeOZgQw"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      Subscribe
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section>
+          <Card className="bg-gradient-tech border-border">
+            <CardHeader>
+              <CardTitle className="text-2xl text-primary">Technical Achievements</CardTitle>
+              <CardDescription>
+                Key milestones and capabilities of our robot design
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-accent">Autonomous Performance</h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• Advanced 6+0 sample autonomous routine</li>
+                    <li>• Precision 0+5 specimen autonomous sequence</li>
+                    <li>• Consistent and reliable autonomous execution</li>
+                    <li>• Strategic scoring optimization</li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-accent">Competition Features</h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• Level 3 hang capability for maximum points</li>
+                    <li>• High-capacity sample and specimen handling</li>
+                    <li>• Robust and reliable mechanical design</li>
+                    <li>• World Championship proven performance</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8 p-4 bg-accent/10 rounded-xl border border-accent/20">
+                <p className="text-sm text-muted-foreground italic">
+                  Last Updated: February 26, 2025
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default Robot;

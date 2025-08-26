@@ -6,9 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Index from "./pages/Index";
 import Team from "./pages/Team";
-import Robot from "./pages/Robot";
+import ITDRobot from "./pages/2025Robot";
+import CSRobot from "./pages/2024Robot";
+import PPlayRobot from "./pages/2023Robot";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
+import Media from "./pages/Media";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,7 +26,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/robot" element={<Robot />} />
+          <Route path="/into-the-deep-robot" element={<ITDRobot />} />
+          <Route path="/center-stage-robot" element={<CSRobot />} />
+          <Route path="/power-play-robot" element={<PPlayRobot />} />
+          <Route path="/media" element={<Media />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

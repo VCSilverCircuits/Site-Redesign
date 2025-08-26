@@ -2,32 +2,24 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Trophy, Users } from "lucide-react";
 
-import worldsTeamImage from "@/assets/worlds-team.jpg";
+import worldsTeamImage from "@/assets/TeamPhotos/worlds-team.jpg";
 
 const Events = () => {
   const achievements = [
     {
       icon: <Trophy className="h-5 w-5" />,
-      label: "16th Place",
-      description: "Ochoa Division out of 56 teams"
+      label: "1st Place",
+      description: "Jemison Division out of 65 teams"
     },
     {
       icon: <Trophy className="h-5 w-5" />,
-      label: "41st Overall",
+      label: "29th Overall",
       description: "Entire World Championship event"
     },
     {
       icon: <Users className="h-5 w-5" />,
       label: "Team Growth",
       description: "Immense learning and development"
-    }
-  ];
-
-  const eventGallery = [
-    {
-      image: worldsTeamImage,
-      title: "Team with FIRST Sign",
-      description: "Official team photo at the World Championship"
     }
   ];
 
@@ -40,77 +32,12 @@ const Events = () => {
             Following our journey through competitions, from local qualifiers to the World Championship stage.
           </p>
         </div>
-
-        <section className="mb-16">
-          <Card className="bg-gradient-hero border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech overflow-hidden">
-            <div className="relative">
-              <img
-                src={worldsTeamImage}
-                alt="2024 FIRST World Championship Team"
-                className="w-full h-96 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <Badge variant="secondary" className="mb-4">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  April 17-20, 2024
-                </Badge>
-                <h2 className="text-4xl font-bold text-primary mb-2">2024 FIRST World Championship</h2>
-                <p className="text-lg text-muted-foreground flex items-center">
-                  <MapPin className="h-5 w-5 mr-2" />
-                  Houston, Texas
-                </p>
-              </div>
-            </div>
-          </Card>
-        </section>
-
-        <section className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech tech-fade-in">
-                <CardContent className="p-6 text-center">
-                  <div className="flex justify-center mb-4 text-accent">
-                    {achievement.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">{achievement.label}</h3>
-                  <p className="text-muted-foreground">{achievement.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
         <section className="mb-16">
           <Card className="bg-gradient-tech border-border">
             <CardHeader>
-              <CardTitle className="text-3xl text-primary">World Championship Experience</CardTitle>
-              <CardDescription className="text-lg">
-                Our incredible journey to the world's biggest robotics competition
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="prose prose-lg max-w-none text-muted-foreground">
-              <p className="leading-relaxed mb-6">
-                We are incredibly thankful for the opportunity to have attended the FIRST World Championship in Houston, Texas, from April 17–20. We deeply appreciate all the sponsors and supporters who made it possible for us to participate in this prestigious event. Our team worked diligently for months with the goal of attending this competition and giving our best performance.
-              </p>
-              
-              <p className="leading-relaxed mb-6">
-                After extensive preparation and countless hours of hard work, we competed and placed <span className="text-primary font-semibold">16th in the Ochoa Division out of 56 teams</span>, and <span className="text-primary font-semibold">41st overall</span> in the entire event. While we did not win any awards, we feel that we have grown and learned immensely throughout this season.
-              </p>
-              
-              <p className="leading-relaxed">
-                We are excited about the upcoming season and look forward to what it holds. Thank you once again for your support!
-              </p>
-            </CardContent>
-          </Card>
-        </section>
-
-        <section className="mb-16">
-          <Card className="bg-gradient-tech border-border">
-            <CardHeader>
-              <CardTitle className="text-3xl text-primary">2024-2025 Season Goals</CardTitle>
+              <CardTitle className="text-3xl text-primary">2025-2026 Season Goals</CardTitle>
               <CardDescription>
-                Our aspirations for the current Into The Deep season
+                Our aspirations for the next DECODE season
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -150,6 +77,69 @@ const Events = () => {
                   </ul>
                 </div>
               </div>
+            </CardContent>
+          </Card>
+        </section>
+        <section className="mb-16">
+          <Card className="bg-gradient-hero border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech overflow-hidden">
+            <div className="relative">
+              <img
+                src={worldsTeamImage}
+                alt="2024 FIRST World Championship Team"
+                className="w-full h-96 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8">
+                <Badge variant="secondary" className="mb-4">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  April 16-19, 2025
+                </Badge>
+                <h2 className="text-4xl font-bold text-primary mb-2">2025 FIRST World Championship</h2>
+                <p className="text-lg text-muted-foreground flex items-center">
+                  <MapPin className="h-5 w-5 mr-2" />
+                  Houston, Texas
+                </p>
+              </div>
+            </div>
+          </Card>
+        </section>
+
+        <section className="mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {achievements.map((achievement, index) => (
+              <Card key={index} className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech tech-fade-in">
+                <CardContent className="p-6 text-center">
+                  <div className="flex justify-center mb-4 text-accent">
+                    {achievement.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-2">{achievement.label}</h3>
+                  <p className="text-muted-foreground">{achievement.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <Card className="bg-gradient-tech border-border">
+            <CardHeader>
+              <CardTitle className="text-3xl text-primary">World Championship Experience</CardTitle>
+              <CardDescription className="text-lg">
+                Our incredible journey to the world's biggest robotics competition
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="prose prose-lg max-w-none text-muted-foreground">
+              <p className="leading-relaxed mb-6">
+                We are incredibly thankful for the opportunity to have attended the FIRST World Championship in Houston, Texas, from April 16-19. We deeply appreciate all the sponsors and supporters who made it possible for us to participate in this prestigious event. Our team worked diligently for months with the goal of attending this competition and giving our best performance.
+              </p>
+              
+              <p className="leading-relaxed mb-6">
+                After extensive preparation and countless hours of hard work, we competed and placed <span className="text-primary font-semibold">1st in the Jemison Division out of 64 teams</span>, and <span className="text-primary font-semibold">29th overall</span> in the entire event. While we did not win any awards, we feel that we have grown and learned immensely throughout this season.
+              </p>
+              
+              <p className="leading-relaxed">
+                We are excited about the upcoming season and look forward to what it holds. Thank you once again for your support!
+              </p>
             </CardContent>
           </Card>
         </section>

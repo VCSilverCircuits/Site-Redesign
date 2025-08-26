@@ -4,28 +4,28 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Trophy, Users, Zap, ExternalLink, Heart } from "lucide-react";
 
-import teamHeroImage from "@/assets/team-hero.jpg";
-import teamPhoto1 from "@/assets/team-photo-1.jpg";
-import teamPhoto2 from "@/assets/team-photo-2.jpg";
+import teamHeroImage from "@/assets/TeamPhotos/team-hero.jpg";
+import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.jpg";
+import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.jpg";
 
 const Index = () => {
   const achievements = [
     {
       icon: <Trophy className="h-8 w-8" />,
       title: "World Championship",
-      description: "16th place in Ochoa Division",
-      highlight: "2024"
+      description: "1st Place in Jemison Division",
+      highlight: "2025 INTO THE DEEP"
     },
     {
       icon: <Zap className="h-8 w-8" />,
       title: "Robot Performance",
-      description: "401 point high score",
-      highlight: "Record"
+      description: "442 Point High Score",
+      highlight: "Team Record"
     },
     {
       icon: <Users className="h-8 w-8" />,
       title: "Team Spirit",
-      description: "6 dedicated team members",
+      description: "6 Strong and Dedicated Team Members",
       highlight: "Strong"
     }
   ];
@@ -63,7 +63,7 @@ const Index = () => {
             <Button variant="hero" size="lg" asChild>
               <Link to="/team">Meet Our Team</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="hero" size="lg" asChild>
               <Link to="/robot">See Our Robot</Link>
             </Button>
           </div>
@@ -115,14 +115,14 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
               <img
-                src={teamPhoto1}
+                src={teamPhoto2}
                 alt="VC Silver Circuits Team Competition"
                 className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
               <img
-                src={teamPhoto2}
+                src={teamPhoto1}
                 alt="VC Silver Circuits Team Workshop"
                 className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
               />
