@@ -5,6 +5,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 import Navigation from "./components/Navigation";
 import Index from "./pages/Index";
 import Team from "./pages/Team";
@@ -15,7 +17,6 @@ import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Media from "./pages/Media";
 import NotFound from "./pages/NotFound";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const queryClient = new QueryClient();
 
@@ -38,10 +39,8 @@ const App = () => {
   }, []);
 
   return (
-    
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <SpeedInsights/>
         <Toaster />
         <Sonner />
         <BrowserRouter>
@@ -49,7 +48,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/team" element={<Team />} />
-            <Route path="/robot" element={<ITDRobot />} />
             <Route path="/into-the-deep-robot" element={<ITDRobot />} />
             <Route path="/center-stage-robot" element={<CSRobot />} />
             <Route path="/power-play-robot" element={<PPlayRobot />} />
@@ -59,9 +57,9 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        <SpeedInsights />
       </TooltipProvider>
     </QueryClientProvider>
-    
   );
 };
 
