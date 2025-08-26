@@ -5,7 +5,8 @@ import { ExternalLink, Play } from "lucide-react";
 import Footer from "@/components/Footer";
 import robot1Image from "@/assets/RobotPhotos/ITDRobot-1.jpg";
 import robot2Image from "@/assets/RobotPhotos/ITDRobot-2.jpg";
-
+import robotV11Image from "@/assets/RobotPhotos/ITDRobot-V1-1.jpg";
+import robotV12Image from "@/assets/RobotPhotos/ITDRobot-V1-2.jpg";
 const Robot = () => {
   const stats = [
     { label: "OPR", value: "172", description: "Lobster Cup Invitational" },
@@ -18,11 +19,13 @@ const Robot = () => {
   ];
 
   const previousStats = [
+    { label: "OPR", value: "163.77", description: "Regional Performance Average" },
+    { label: "High Score", value: "318", description: "No Penalties" },
     { label: "Samples Auto", value: "5+0", description: "Sample Auto" },
     { label: "Specimens Auto", value: "0+4", description: "Specimen Auto" },
     { label: "Avg Samples", value: "13", description: "Tele-OP High of 16" },
-    { label: "High Score", value: "318", description: "No Penalties" },
-    { label: "Hang Level", value: "2", description: "Fast Level 2 Hang" }
+    { label: "Avg Specimens", value: "7", description: "Tele-OP Practice Consistency" },
+    { label: "Hang Level", value: "2", description: "Fast Level 2 Hang" },
   ];
 
   return (
@@ -83,19 +86,35 @@ const Robot = () => {
         </section>
 
         <section className="mb-16">
-          <Card className="bg-gradient-tech border-border">
+          <Card className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
             <CardHeader>
-              <CardTitle className="text-3xl text-primary">Undertow V1 Legacy</CardTitle>
+              <CardTitle className="text-3xl text-primary">Legacy Undertow</CardTitle>
               <CardDescription className="text-lg">
                 Previous iteration that laid the foundation for our current success
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
+                  <img
+                    src={robotV11Image}
+                    alt="Undertow V1 Robot Prototype"
+                    className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="group overflow-hidden rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
+                  <img
+                    src={robotV12Image}
+                    alt="Undertow V1 Competition Match"
+                    className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {previousStats.map((stat, index) => (
                   <div
                     key={index}
-                    className="bg-card/30 rounded-xl p-6 border border-border/50"
+                    className="bg-card/50 rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-300"
                   >
                     <div className="text-2xl font-bold text-accent mb-2">{stat.value}</div>
                     <div className="text-sm font-medium text-foreground mb-1">{stat.label}</div>
@@ -103,6 +122,13 @@ const Robot = () => {
                   </div>
                 ))}
               </div>
+
+              <p className="mt-6 text-muted-foreground text-sm leading-relaxed">
+                Undertow V1 was our first Into The Deep competition robot. It established our
+                reliable drive base, intake, and specimen systems, which set a <span className="font-semibold">Nevada State High Score Record</span>.
+                Many of the lessons learned from V1's autonomous paths and endgame hang system
+                directly influenced the enhancements in Undertow V2.
+              </p>
             </CardContent>
           </Card>
         </section>
@@ -144,7 +170,7 @@ const Robot = () => {
                 </div>
                 <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
                   <div>
-                    <h3 className="font-semibold text-foreground">Nevada State Record with Undertow V1</h3>
+                    <h3 className="font-semibold text-foreground">Nevada State Record with Legacy Undertow</h3>
                   </div>
                   <Button variant="hero" asChild>
                     <a href="https://www.youtube.com/watch?v=Ug-gPDnumV8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">

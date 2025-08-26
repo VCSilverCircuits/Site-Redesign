@@ -49,7 +49,7 @@ const Team = () => {
     {
       name: "Mentor Coen",
       role: "Technical Mentor",
-      bio: "Hello! I'm Coen, a mentor of the VC Silver Circuits. Having recently graduated high school and subsequently graduated from the team, I have shifted my focus to helping the new and existing team members succeed in the program. I am aiming for a degree in mechanical engineering at UNR and hope to find a carrier with 3d design. this will be my 8th year with the program having done a single year of First Lego League with the VC Silver Bricks and 6 years of FIRST Tech Challenge. I help team members with 3d modeling in Autodesk Fusion 360 and with robot design strategy. I'm excited to see how the team does this upcoming season."
+      bio: "Hello! I'm Coen, a mentor of the VC Silver Circuits. Having recently graduated high school and subsequently graduated from the team, I have shifted my focus to helping the new and existing team members succeed in the program. I am aiming for a degree in mechanical engineering at UNR and hope to find a carrier with 3d design. this will be my 8th year with the program having done a single year of First Lego League with the VC Silver Bricks and 6 years of FIRST Tech Challenge. I help team members with 3D Modeling in Autodesk Fusion and with robot design strategy. I'm excited to see how the team does this upcoming season."
     }
   ];
 
