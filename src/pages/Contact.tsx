@@ -102,6 +102,7 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
+
                 <div className="flex items-start space-x-4">
                   <MapPin className="h-6 w-6 text-accent mt-1" />
                   <div>
@@ -113,8 +114,21 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-accent mt-1" />
                   <div>
                     <h3 className="font-semibold text-foreground">Social Media</h3>
-                    <p className="text-muted-foreground">Facebook - VC Silver Circuits</p>
-                    <p className="text-muted-foreground">Instagram - VC Silver Circuits</p>
+                    <p className="text-muted-foreground">
+                      <a href="https://www.youtube.com/@VCSilverCircuitsFTC16158" target="_blank" className="hover:text-primary-glow transition-colors">
+                        YouTube - @VCSilverCircuitsFTC16158
+                      </a>
+                    </p>
+                    <p className="text-muted-foreground">
+                      <a href="https://www.facebook.com/VCSilverCircuits" target="_blank" className="hover:text-primary-glow transition-colors">
+                        Facebook - VC Silver Circuits
+                      </a>
+                    </p>
+                    <p className="text-muted-foreground">
+                      <a href="https://www.instagram.com/vcsilvercircuits" target="_blank" className="hover:text-primary-glow transition-colors">
+                        Instagram - VC Silver Circuits
+                      </a>
+                    </p>
                   </div>
                 </div>
               </CardContent>
