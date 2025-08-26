@@ -15,6 +15,7 @@ import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Media from "./pages/Media";
 import NotFound from "./pages/NotFound";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const queryClient = new QueryClient();
 
@@ -37,8 +38,10 @@ const App = () => {
   }, []);
 
   return (
+    
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <SpeedInsights/>
         <Toaster />
         <Sonner />
         <BrowserRouter>
@@ -58,6 +61,7 @@ const App = () => {
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
+    
   );
 };
 
