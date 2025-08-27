@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
@@ -55,7 +56,6 @@ const Index = () => {
 
   return (
     <>
-
       <AnimatePresence>
         {showIntro && (
           <motion.div
@@ -95,7 +95,7 @@ const Index = () => {
       {!showIntro && (
         <div className="min-h-screen">
           <motion.section
-            className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
+            className="relative min-h-[80dvh] sm:min-h-[100dvh] flex items-center justify-center overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -111,7 +111,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/50" />
             </div>
 
-            <div className="relative z-10 container mx-auto px-4 text-center">
+            <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center pt-8 sm:pt-0">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -119,13 +119,13 @@ const Index = () => {
                 transition={{ duration: 0.6 }}
                 variants={fadeUp}
               >
-                <Badge variant="secondary" className="mb-6 text-lg px-6 py-2">
+                <Badge variant="secondary" className="mb-4 sm:mb-6 text-sm sm:text-lg px-4 sm:px-6 py-1 sm:py-2">
                   We are FTC Team #16158
                 </Badge>
               </motion.div>
 
               <motion.h1
-                className="text-6xl md:text-8xl font-bold mb-6 gradient-text"
+                className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 gradient-text"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -136,7 +136,7 @@ const Index = () => {
               </motion.h1>
 
               <motion.p
-                className="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto"
+                className="text-lg sm:text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -147,7 +147,7 @@ const Index = () => {
               </motion.p>
 
               <motion.p
-                className="text-lg text-white mb-12 max-w-4xl mx-auto leading-relaxed"
+                className="text-base sm:text-lg text-white mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -352,7 +352,7 @@ const Index = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    Learn More About FIRST and FIRST Tech Challenge
+                    Learn More About FIRST Tech Challenge
                     <ExternalLink className="h-5 w-5" />
                   </a>
                 </Button>
