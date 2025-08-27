@@ -10,7 +10,7 @@ import robotV12Image from "@/assets/RobotPhotos/ITDRobot-V1-2.jpg";
 const Robot = () => {
   const stats = [
     { label: "OPR", value: "172", description: "Lobster Cup Invitational" },
-    { label: "High Score", value: "442", description: "World Championship" },
+    { label: "High Score", value: "402", description: "World Championship" },
     { label: "Samples Auto", value: "6+0", description: "Sample Auto Performance" },
     { label: "Specimens Auto", value: "0+5", description: "Specimen Auto Performance" },
     { label: "Avg Samples", value: "15", description: "During Tele-OP Practice" },

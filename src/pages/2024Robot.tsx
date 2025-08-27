@@ -16,12 +16,7 @@ const Robot = () => {
     { label: "Hang Level", value: "Custom", description: "Ratcheting suspension mechanism" }
   ];
 
-  const previousStats = [
-    { label: "Intake Capacity", value: "1-2 Pixels", description: "Earlier prototypes" },
-    { label: "Slide Extension", value: "≤1 m", description: "Legacy design reach" },
-    { label: "Drone Launch", value: "≤3 m", description: "Previous launcher" },
-    { label: "Hang Level", value: "Level 2", description: "Earlier hanging performance" }
-  ];
+
 
   return (
     <div className="min-h-screen pt-20 tech-fade-in">
@@ -80,30 +75,7 @@ const Robot = () => {
           </Card>
         </section>
 
-        <section className="mb-16">
-          <Card className="bg-gradient-tech border-border">
-            <CardHeader>
-              <CardTitle className="text-3xl text-primary">Center Stage Legacy</CardTitle>
-              <CardDescription className="text-lg">
-                Previous robot iterations and capabilities that led to the current design
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {previousStats.map((stat, index) => (
-                  <div
-                    key={index}
-                    className="bg-card/30 rounded-xl p-6 border border-border/50"
-                  >
-                    <div className="text-2xl font-bold text-accent mb-2">{stat.value}</div>
-                    <div className="text-sm font-medium text-foreground mb-1">{stat.label}</div>
-                    <div className="text-xs text-muted-foreground">{stat.description}</div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </section>
+
 
         <section className="mb-16">
           <Card className="bg-gradient-tech border-border">

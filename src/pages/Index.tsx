@@ -55,10 +55,11 @@ const Index = () => {
 
   return (
     <>
+
       <AnimatePresence>
         {showIntro && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-background"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.6 } }}
           >
@@ -71,6 +72,22 @@ const Index = () => {
             >
               VC Silver Circuits
             </motion.h1>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="spinner"
+            />
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-lg text-white mt-4"
+            >
+              Loading assets...
+            </motion.p>
           </motion.div>
         )}
       </AnimatePresence>
