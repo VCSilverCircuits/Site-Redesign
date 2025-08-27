@@ -17,14 +17,36 @@ import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Media from "./pages/Media";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "@/components/GoToTop";
+
+import teamHero from "@/assets/TeamPhotos/team-hero.jpg";
+import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.jpg";
+import teamPhoto2 from "@/assets/TeamPhotos/team-photo-2.jpg";
+import worldsTeam from "@/assets/TeamPhotos/worlds-team.jpg";
+import hunter from "@/assets/TeamMembers/hunter.jpg";
+import aiden from "@/assets/TeamMembers/aiden.jpg";
+import tucker from "@/assets/TeamMembers/tucker.jpg";
+import william from "@/assets/TeamMembers/william.jpg";
+import powerPlay1 from "@/assets/RobotPhotos/power-play-1.jpg";
+import powerPlay2 from "@/assets/RobotPhotos/power-play-2.jpg";
+import itd1 from "@/assets/RobotPhotos/ITDRobot-1.jpg";
+import itd2 from "@/assets/RobotPhotos/ITDRobot-2.jpg";
+import cs1 from "@/assets/RobotPhotos/centerstage-robot-1.jpg";
+import cs2 from "@/assets/RobotPhotos/centerstage-robot-2.png";
+
+const preloadImages = (images: string[]) => {
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
 
 const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-    });
+    const lenis = new Lenis({ duration: 1.2 });
+    (window as any).lenis = lenis;
 
     function raf(time: number) {
       lenis.raf(time);
@@ -35,7 +57,33 @@ const App = () => {
 
     return () => {
       lenis.destroy();
+      delete (window as any).lenis;
     };
+  }, []);
+
+  useEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual"; 
+    }
+  }, []);
+
+  useEffect(() => {
+    preloadImages([
+      teamHero,
+      teamPhoto1,
+      teamPhoto2,
+      worldsTeam,
+      hunter,
+      aiden,
+      tucker,
+      william,
+      powerPlay1,
+      powerPlay2,
+      itd1,
+      itd2,
+      cs1,
+      cs2,
+    ]);
   }, []);
 
   return (
@@ -45,6 +93,7 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <Navigation />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/team" element={<Team />} />

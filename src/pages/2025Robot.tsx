@@ -63,7 +63,7 @@ const Robot = () => {
         <section className="mb-16">
           <Card className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
             <CardHeader>
-              <CardTitle className="text-3xl text-primary">Undertow V2 Performance</CardTitle>
+              <CardTitle className="text-3xl text-primary">Undertow V2</CardTitle>
               <CardDescription className="text-lg">
                 Latest iteration with enhanced capabilities and record-breaking performance
               </CardDescription>
