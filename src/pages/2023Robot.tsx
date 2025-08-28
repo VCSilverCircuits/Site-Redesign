@@ -12,7 +12,7 @@ const PowerPlayRobot = () => {
     { label: "High Score (Solo)", value: "221", description: "Achieved during Power Play season" },
     { label: "Autonomous", value: "5+1 cones + park", description: "High autonomous score of 80 points solo" },
     { label: "Teleop", value: "18 cones", description: "Capable of scoring all 18 cones during teleop" },
-    { label: "Endgame", value: "Beacon scoring", description: "Simultaneous beacon and cone scoring" }
+    { label: "Endgame", value: "Beacon Scoring", description: "Simultaneous beacon and cone scoring" }
   ];
 
   return (

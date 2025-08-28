@@ -24,8 +24,22 @@ const Navigation = () => {
 
   const isActive = (path: string) => {
     if (path === "/") return location.pathname === "/";
+
+    if (path === "/team") {
+      return location.pathname.startsWith("/team") || location.pathname.startsWith("/gallery");
+    }
+
+    if (path === "/into-the-deep-robot") {
+      return (
+        location.pathname.startsWith("/into-the-deep-robot") ||
+        location.pathname.startsWith("/center-stage-robot") ||
+        location.pathname.startsWith("/power-play-robot")
+      );
+    }
+
     return location.pathname.startsWith(path);
   };
+
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -56,20 +70,28 @@ const Navigation = () => {
                       <Link to="/into-the-deep-robot">2024-2025 Into The Deep</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <a
-                        href="/center-stage-robot"
-                        rel="noopener noreferrer"
-                      >
-                        2023-2024 Center Stage
-                      </a>
+                      <Link to="/center-stage-robot">2023-2024 Center Stage</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <a
-                        href="/power-play-robot"
-                        rel="noopener noreferrer"
-                      >
-                        2022-2023 Power Play
-                      </a>
+                      <Link to="/power-play-robot">2022-2023 Power Play</Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : item.label === "Team" ? (
+                <DropdownMenu key={item.href}>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      variant={isActive(item.href) ? "default" : "ghost"}
+                    >
+                      {item.label}
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start">
+                    <DropdownMenuItem asChild>
+                      <Link to="/team">Our Members</Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link to="/gallery">Gallery</Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -109,39 +131,32 @@ const Navigation = () => {
                       <Link to="/into-the-deep-robot">{item.label}</Link>
                     </Button>
                     <div className="pl-4 flex flex-col space-y-1">
-                      <Button
-                        variant="ghost"
-                        className="justify-start"
-                        asChild
-                        onClick={() => setIsOpen(false)}
-                      >
+                      <Button variant="ghost" className="justify-start" asChild>
                         <Link to="/into-the-deep-robot">2024-2025 Into The Deep</Link>
                       </Button>
-                      <Button
-                        variant="ghost"
-                        className="justify-start"
-                        asChild
-                      >
-                        <a
-                          href="/center-stage-robot"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          2023-2024 Center Stage
-                        </a>
+                      <Button variant="ghost" className="justify-start" asChild>
+                        <Link to="/center-stage-robot">2023-2024 Center Stage</Link>
                       </Button>
-                      <Button
-                        variant="ghost"
-                        className="justify-start"
-                        asChild
-                      >
-                        <a
-                          href="/power-play-robot"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          2022-2023 Power Play
-                        </a>
+                      <Button variant="ghost" className="justify-start" asChild>
+                        <Link to="/power-play-robot">2022-2023 Power Play</Link>
+                      </Button>
+                    </div>
+                  </div>
+                ) : item.label === "Team" ? (
+                  <div key={item.href} className="flex flex-col">
+                    <Button
+                      variant={isActive(item.href) ? "default" : "ghost"}
+                      className="justify-start"
+                      asChild
+                    >
+                      <Link to="/team">{item.label}</Link>
+                    </Button>
+                    <div className="pl-4 flex flex-col space-y-1">
+                      <Button variant="ghost" className="justify-start" asChild>
+                        <Link to="/team">Our Members</Link>
+                      </Button>
+                      <Button variant="ghost" className="justify-start" asChild>
+                        <Link to="/gallery">Gallery</Link>
                       </Button>
                     </div>
                   </div>

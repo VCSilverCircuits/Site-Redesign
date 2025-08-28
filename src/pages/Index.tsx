@@ -49,7 +49,7 @@ const Index = () => {
     {
       icon: <Users className="h-8 w-8" />,
       title: "Team Spirit",
-      description: "6 Strong and Dedicated Team Members",
+      description: "7 Strong and Dedicated Team Members",
       highlight: "Strong",
     },
   ];
@@ -158,7 +158,7 @@ const Index = () => {
                 Tech Challenge program. Our team consists of seven team members,
                 two coaches, and one mentor, dedicated to pursuing knowledge in
                 robotics and engineering. We come from a small town in rural
-                Nevada called Virginia City, but our passion is big.
+                Nevada called Virginia City in Storey County, Nevada, but our passion is big.
               </motion.p>
 
               <motion.div

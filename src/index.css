@@ -154,4 +154,40 @@
     }
   }
 
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 0.7s ease forwards;
+  }
+
+  .animate-fadeInDown {
+    animation: fadeInDown 0.7s ease forwards;
+  }
+
+  .animate-fadeInLeft {
+    animation: fadeInLeft 0.7s ease forwards;
+  }
+
 }

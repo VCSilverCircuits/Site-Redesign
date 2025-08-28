@@ -18,6 +18,7 @@ import Contact from "./pages/Contact";
 import Media from "./pages/Media";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "@/components/GoToTop";
+import Gallery from "./pages/Gallery";
 
 import teamHero from "@/assets/TeamPhotos/team-hero.jpg";
 import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.jpg";
@@ -101,6 +102,7 @@ const App = () => {
             <Route path="/center-stage-robot" element={<CSRobot />} />
             <Route path="/power-play-robot" element={<PPlayRobot />} />
             <Route path="/media" element={<Media />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
