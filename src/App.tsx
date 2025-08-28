@@ -18,7 +18,7 @@ import Contact from "./pages/Contact";
 import Media from "./pages/Media";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "@/components/GoToTop";
-import Gallery from "./pages/Gallery";
+import TeamPortfolio from "./pages/Portfolio";
 
 import teamHero from "@/assets/TeamPhotos/team-hero.jpg";
 import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.jpg";
@@ -34,7 +34,6 @@ import itd1 from "@/assets/RobotPhotos/ITDRobot-1.jpg";
 import itd2 from "@/assets/RobotPhotos/ITDRobot-2.jpg";
 import cs1 from "@/assets/RobotPhotos/centerstage-robot-1.jpg";
 import cs2 from "@/assets/RobotPhotos/centerstage-robot-2.png";
-import TeamPortfolio from "./pages/Portfolio";
 
 const preloadImages = (images: string[]) => {
   images.forEach((src) => {
