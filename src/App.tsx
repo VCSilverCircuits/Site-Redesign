@@ -19,6 +19,7 @@ import Media from "./pages/Media";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "@/components/GoToTop";
 import TeamPortfolio from "./pages/Portfolio";
+import Sponsors from "./pages/Sponsors";
 
 import teamHero from "@/assets/TeamPhotos/team-hero.jpg";
 import teamPhoto1 from "@/assets/TeamPhotos/team-photo-1.jpg";
@@ -103,6 +104,7 @@ const App = () => {
             <Route path="/power-play-robot" element={<PPlayRobot />} />
             <Route path="/media" element={<Media />} />
             <Route path="/portfolio" element={<TeamPortfolio />} />
+            <Route path="/sponsors" element={<Sponsors />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />

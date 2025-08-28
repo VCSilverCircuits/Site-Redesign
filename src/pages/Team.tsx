@@ -1,3 +1,8 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+
 import TeamMemberCard from "@/components/TeamMemberCard";
 import hunterImage from "@/assets/TeamMembers/hunter.jpg";
 import tuckerImage from "@/assets/TeamMembers/tucker.jpg";
@@ -60,6 +65,11 @@ const Team = () => {
       bio: "No bio available at this time."
     },
     {
+      name: "Mentor Rogan",
+      role: "International Mentor",
+      bio: "Hello, my name is Rogan.  This will be my 5th season with the VC Silver Circuits and my first season in the capacity of coach, prior to that I was a mentor for the team.  I really enjoy the technical aspects of FTC and sharing my knowledge with the team so they can tackle the challenges of the season.  I have worked in STEM for about 25 years and really appreciate all the practical skills that are learned through the program.  In my spare time I enjoy working on antique cars and electronics."
+    },
+    {
       name: "Mentor Coen",
       role: "Technical Mentor",
       bio: "Hello! I'm Coen, a mentor of the VC Silver Circuits. Having recently graduated high school and subsequently graduated from the team, I have shifted my focus to helping the new and existing team members succeed in the program. I am aiming for a degree in mechanical engineering at UNR and hope to find a carrier with 3d design. this will be my 8th year with the program having done a single year of First Lego League with the VC Silver Bricks and 6 years of FIRST Tech Challenge. I help team members with 3D Modeling in Autodesk Fusion and with robot design strategy. I'm excited to see how the team does this upcoming season."
@@ -93,11 +103,12 @@ const Team = () => {
 
         <section>
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">Coaches & Mentors</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-8xl mx-auto">
+          <div className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech tech-fade-in grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {coaches.map((coach, index) => (
               <div
                 key={index}
-                className="bg-gradient-tech border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-tech tech-fade-in"
+                className={`w-full border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-tech tech-fade-in ${index === 3 ? "lg:col-span-3" : ""
+                  }`}
               >
                 <h3 className="text-2xl font-bold text-primary mb-2">{coach.name}</h3>
                 <p className="text-accent font-medium uppercase tracking-wide text-sm mb-4">
@@ -108,6 +119,8 @@ const Team = () => {
             ))}
           </div>
         </section>
+
+
       </div>
       <Footer />
     </div>

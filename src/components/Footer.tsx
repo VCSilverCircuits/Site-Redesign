@@ -8,9 +8,9 @@ const Footer = () => {
                     &copy; {new Date().getFullYear()} VC Silver Circuits. All rights reserved.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                    Designed by{" "}
+                    Designed and hand built by{" "}
                     <a href="https://awdevsoftware.org" className="underline hover:text-primary">
-                        awdevSoftware
+                        awdevSoftware (Aaron)
                     </a>
                 </p>
                 <div className="flex space-x-4 mt-4 md:mt-0">

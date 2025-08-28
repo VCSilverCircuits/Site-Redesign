@@ -93,6 +93,9 @@ const Navigation = () => {
                     <DropdownMenuItem asChild>
                       <Link to="/portfolio">Portfolio</Link>
                     </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link to="/sponsors">Sponsors</Link>
+                    </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
               ) : (
@@ -157,6 +160,9 @@ const Navigation = () => {
                       </Button>
                       <Button variant="ghost" className="justify-start" asChild>
                         <Link to="/portfolio">Portfolio</Link>
+                      </Button>
+                      <Button variant="ghost" className="justify-start" asChild>
+                        <Link to="/sponsors">Sponsors</Link>
                       </Button>
                     </div>
                   </div>
