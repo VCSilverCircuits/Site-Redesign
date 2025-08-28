@@ -72,7 +72,7 @@ const Team = () => {
         <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Meet Our Team</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            These are our passionate individuals who make up the VC Silver Circuits, each bringing unique skills and dedication to our robotics journey.
+            These are the passionate individuals who make up the VC Silver Circuits, each bringing unique skills and dedication to our robotics journey.
           </p>
         </div>
 

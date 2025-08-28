@@ -19,14 +19,14 @@ const Navigation = () => {
     { href: "/into-the-deep-robot", label: "Robots" },
     { href: "/media", label: "Media" },
     { href: "/events", label: "Events" },
-    { href: "/contact", label: "Contact" },
+    { href: "/contact", label: "Contact/Donate" },
   ];
 
   const isActive = (path: string) => {
     if (path === "/") return location.pathname === "/";
 
     if (path === "/team") {
-      return location.pathname.startsWith("/team") || location.pathname.startsWith("/gallery");
+      return location.pathname.startsWith("/team") || location.pathname.startsWith("/portfolio");
     }
 
     if (path === "/into-the-deep-robot") {
@@ -91,7 +91,7 @@ const Navigation = () => {
                       <Link to="/team">Our Members</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <Link to="/gallery">Gallery</Link>
+                      <Link to="/portfolio">Portfolio</Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -156,7 +156,7 @@ const Navigation = () => {
                         <Link to="/team">Our Members</Link>
                       </Button>
                       <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/gallery">Gallery</Link>
+                        <Link to="/portfolio">Portfolio</Link>
                       </Button>
                     </div>
                   </div>

@@ -34,6 +34,7 @@ import itd1 from "@/assets/RobotPhotos/ITDRobot-1.jpg";
 import itd2 from "@/assets/RobotPhotos/ITDRobot-2.jpg";
 import cs1 from "@/assets/RobotPhotos/centerstage-robot-1.jpg";
 import cs2 from "@/assets/RobotPhotos/centerstage-robot-2.png";
+import TeamPortfolio from "./pages/Portfolio";
 
 const preloadImages = (images: string[]) => {
   images.forEach((src) => {
@@ -102,7 +103,7 @@ const App = () => {
             <Route path="/center-stage-robot" element={<CSRobot />} />
             <Route path="/power-play-robot" element={<PPlayRobot />} />
             <Route path="/media" element={<Media />} />
-            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/portfolio" element={<TeamPortfolio />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />

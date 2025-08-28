@@ -43,7 +43,7 @@ const Contact = () => {
 
   const supportLinks = [
     { name: "Venmo", url: "https://venmo.com/u/SilverCircuits16158", description: "Support us via Venmo", color: "text-blue-400" },
-    { name: "GoFundMe", url: "https://gofund.me/cb49a9f8", description: "Contribute to our team goals", color: "text-green-400" },
+    { name: "GoFundMe", url: "https://gofund.me/e094b3bd", description: "Contribute to our team goals", color: "text-green-400" },
     { name: "PayPal", url: "https://www.paypal.com/US/fundraiser/charity/4735879", description: "Donate via PayPal", color: "text-blue-500" }
   ];
 
