@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -47,25 +46,8 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    const lenis = new Lenis({ duration: 1.2 });
-    (window as any).lenis = lenis;
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-      delete (window as any).lenis;
-    };
-  }, []);
-
-  useEffect(() => {
     if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual"; 
+      window.history.scrollRestoration = "manual";
     }
   }, []);
 

@@ -67,12 +67,12 @@ const Team = () => {
     {
       name: "Mentor Rogan",
       role: "International Mentor",
-      bio: "Hello, my name is Rogan.  This will be my 5th season with the VC Silver Circuits and my first season in the capacity of coach, prior to that I was a mentor for the team.  I really enjoy the technical aspects of FTC and sharing my knowledge with the team so they can tackle the challenges of the season.  I have worked in STEM for about 25 years and really appreciate all the practical skills that are learned through the program.  In my spare time I enjoy working on antique cars and electronics."
+      bio: "Hello, my name is Rogan. This will be my 5th season with the VC Silver Circuits and my first season in the capacity of coach, prior to that I was a mentor for the team.  I really enjoy the technical aspects of FTC and sharing my knowledge with the team so they can tackle the challenges of the season. I have worked in STEM for about 25 years and really appreciate all the practical skills that are learned through the program. In my spare time I enjoy working on antique cars and electronics."
     },
     {
       name: "Mentor Coen",
       role: "Technical Mentor",
-      bio: "Hello! I'm Coen, a mentor of the VC Silver Circuits. Having recently graduated high school and subsequently graduated from the team, I have shifted my focus to helping the new and existing team members succeed in the program. I am aiming for a degree in mechanical engineering at UNR and hope to find a carrier with 3d design. this will be my 8th year with the program having done a single year of First Lego League with the VC Silver Bricks and 6 years of FIRST Tech Challenge. I help team members with 3D Modeling in Autodesk Fusion and with robot design strategy. I'm excited to see how the team does this upcoming season."
+      bio: "Hello! I'm Coen, a mentor of the VC Silver Circuits. Having recently graduated high school and subsequently graduated from the team, I have shifted my focus to helping the new and existing team members succeed in the program. I am aiming for a degree in mechanical engineering at UNR and hope to find a carrier with 3D design. this will be my 8th year with the program having done a single year of First Lego League with the VC Silver Bricks and 6 years of FIRST Tech Challenge. I help team members with 3D Modeling in Autodesk Fusion and with robot design strategy. I'm excited to see how the team does this upcoming season."
     }
   ];
 
