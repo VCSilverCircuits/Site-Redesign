@@ -30,7 +30,7 @@ const Team = () => {
       name: "Hunter",
       image: hunterImage,
       role: "Designer & Driver & Builder",
-      bio: "Hi, my name is Hunter, a homeschooled Sophomore in high school attending classes at Western Nevada College pursuing a degree in Machine Tool Technology. I specialize in organization, designing in Fusion 360, business, building, and a little programming. I go to all events that I can go to, and I help anywhere that I am needed. I love FIRST because it has taught me so much, especially about using Fusion 360 for designing robot parts and seeing them come to life with my 3D printer. The best part is the friendships I have made and the opportunity to interact with the other teams and compete with them. I would love to be a Designer or a Manufacturing Engineer someday."
+      bio: "Hi, my name is Hunter, a homeschooled Junior in high school attending classes at Western Nevada College pursuing a degree in Machine Tool Technology. I specialize in organization, designing in Fusion 360, business, building, and a little programming. I go to all events that I can go to, and I help anywhere that I am needed. I love FIRST because it has taught me so much, especially about using Fusion 360 for designing robot parts and seeing them come to life with my 3D printer. The best part is the friendships I have made and the opportunity to interact with the other teams and compete with them. I would love to be a Designer or a Manufacturing Engineer someday."
     },
     {
       name: "Aaron",
@@ -42,7 +42,7 @@ const Team = () => {
       name: "William",
       image: williamImage,
       role: "Builder & Designer",
-      bio: "I'm William, I joined the team in 2023. I am a sophomore in high school, and I am looking forward to learning about more robotics. So far, I have learned a lot about things like 3D printing, building, designing, and planning. Last year I learned a lot about the design process of designing a working robot. I am hoping we will design a cool robot this year."
+      bio: "I'm William, I joined the team in 2023. I am a Junior in high school, and I am looking forward to learning about more robotics. So far, I have learned a lot about things like 3D printing, building, designing, and planning. Last year I learned a lot about the design process of designing a working robot. I am hoping we will design a cool robot this year."
     },
     {
       name: "Shaylee",
