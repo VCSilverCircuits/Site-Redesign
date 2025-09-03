@@ -86,7 +86,7 @@ const Index = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-lg text-white mt-4"
             >
-              Loading assets...
+              Loading your experience...
             </motion.p>
           </motion.div>
         )}
