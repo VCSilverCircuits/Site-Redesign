@@ -20,10 +20,10 @@ export default function Cloudflare() {
                 fontWeight: 600,
                 textDecoration: "none",
                 color: "#ffffff",
-                background: "rgba(15, 23, 42, 0.5)", // semi-transparent dark
+                background: "rgba(15, 23, 42, 0.4)", 
                 border: "1px solid rgba(255, 255, 255, 0.15)",
-                backdropFilter: "blur(10px)", // glass effect
-                WebkitBackdropFilter: "blur(10px)", // Safari support
+                backdropFilter: "blur(10px)", 
+                WebkitBackdropFilter: "blur(10px)", 
                 boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)",
                 transition: "transform 0.12s ease, box-shadow 0.12s ease",
             }}
