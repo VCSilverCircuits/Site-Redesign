@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-
+import { Cloudflare } from "@/components//Cloudflare";
 import Navigation from "./components/Navigation";
 import Index from "./pages/Index";
 import Team from "./pages/Team";
@@ -91,6 +91,16 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <div
+            style={{
+              position: "fixed",
+              bottom: "1rem",
+              right: "1rem",
+              zIndex: 50,
+            }}
+          >
+            <Cloudflare />
+          </div>
         </BrowserRouter>
         <SpeedInsights />
       </TooltipProvider>
