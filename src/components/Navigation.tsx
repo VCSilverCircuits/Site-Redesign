@@ -40,28 +40,21 @@ const Navigation = () => {
     return location.pathname.startsWith(path);
   };
 
-
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold gradient-text">
-              VC Silver Circuits
-            </div>
-            <div className="text-sm text-muted-foreground hidden sm:block">
-              #16158
-            </div>
+            <div className="text-2xl font-bold gradient-text">VC Silver Circuits</div>
+            <div className="text-sm text-muted-foreground hidden sm:block">#16158</div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-1">
+=          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) =>
               item.label === "Robots" ? (
                 <DropdownMenu key={item.href}>
                   <DropdownMenuTrigger asChild>
-                    <Button
-                      variant={isActive(item.href) ? "default" : "ghost"}
-                    >
+                    <Button variant={isActive(item.href) ? "default" : "ghost"}>
                       {item.label}
                     </Button>
                   </DropdownMenuTrigger>
@@ -80,9 +73,7 @@ const Navigation = () => {
               ) : item.label === "Team" ? (
                 <DropdownMenu key={item.href}>
                   <DropdownMenuTrigger asChild>
-                    <Button
-                      variant={isActive(item.href) ? "default" : "ghost"}
-                    >
+                    <Button variant={isActive(item.href) ? "default" : "ghost"}>
                       {item.label}
                     </Button>
                   </DropdownMenuTrigger>
@@ -93,24 +84,20 @@ const Navigation = () => {
                     <DropdownMenuItem asChild>
                       <Link to="/portfolio">Portfolio</Link>
                     </DropdownMenuItem>
-                    <DropdownMenuItem>
+                    <DropdownMenuItem asChild>
                       <Link to="/sponsors">Sponsors</Link>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
               ) : (
-                <Button
-                  key={item.href}
-                  variant={isActive(item.href) ? "default" : "ghost"}
-                  asChild
-                >
+                <Button key={item.href} variant={isActive(item.href) ? "default" : "ghost"} asChild>
                   <Link to={item.href}>{item.label}</Link>
                 </Button>
               )
             )}
           </div>
 
-          <Button
+=          <Button
             variant="ghost"
             size="icon"
             className="md:hidden"
@@ -120,49 +107,57 @@ const Navigation = () => {
           </Button>
         </div>
 
-        {isOpen && (
+=        {isOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) =>
                 item.label === "Robots" ? (
                   <div key={item.href} className="flex flex-col">
-                    <Button
-                      variant={isActive(item.href) ? "default" : "ghost"}
-                      className="justify-start"
-                      asChild
-                    >
-                      <Link to="/into-the-deep-robot">{item.label}</Link>
+                    <Button variant={isActive(item.href) ? "default" : "ghost"} className="justify-start" asChild>
+                      <Link to="/into-the-deep-robot" onClick={() => setIsOpen(false)}>
+                        {item.label}
+                      </Link>
                     </Button>
                     <div className="pl-4 flex flex-col space-y-1">
                       <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/into-the-deep-robot">2024-2025 Into The Deep</Link>
+                        <Link to="/into-the-deep-robot" onClick={() => setIsOpen(false)}>
+                          2024-2025 Into The Deep
+                        </Link>
                       </Button>
                       <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/center-stage-robot">2023-2024 Center Stage</Link>
+                        <Link to="/center-stage-robot" onClick={() => setIsOpen(false)}>
+                          2023-2024 Center Stage
+                        </Link>
                       </Button>
                       <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/power-play-robot">2022-2023 Power Play</Link>
+                        <Link to="/power-play-robot" onClick={() => setIsOpen(false)}>
+                          2022-2023 Power Play
+                        </Link>
                       </Button>
                     </div>
                   </div>
                 ) : item.label === "Team" ? (
                   <div key={item.href} className="flex flex-col">
-                    <Button
-                      variant={isActive(item.href) ? "default" : "ghost"}
-                      className="justify-start"
-                      asChild
-                    >
-                      <Link to="/team">{item.label}</Link>
+                    <Button variant={isActive(item.href) ? "default" : "ghost"} className="justify-start" asChild>
+                      <Link to="/team" onClick={() => setIsOpen(false)}>
+                        {item.label}
+                      </Link>
                     </Button>
                     <div className="pl-4 flex flex-col space-y-1">
                       <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/team">Our Members</Link>
+                        <Link to="/team" onClick={() => setIsOpen(false)}>
+                          Our Members
+                        </Link>
                       </Button>
                       <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/portfolio">Portfolio</Link>
+                        <Link to="/portfolio" onClick={() => setIsOpen(false)}>
+                          Portfolio
+                        </Link>
                       </Button>
                       <Button variant="ghost" className="justify-start" asChild>
-                        <Link to="/sponsors">Sponsors</Link>
+                        <Link to="/sponsors" onClick={() => setIsOpen(false)}>
+                          Sponsors
+                        </Link>
                       </Button>
                     </div>
                   </div>
@@ -172,9 +167,10 @@ const Navigation = () => {
                     variant={isActive(item.href) ? "default" : "ghost"}
                     className="justify-start"
                     asChild
-                    onClick={() => setIsOpen(false)}
                   >
-                    <Link to={item.href}>{item.label}</Link>
+                    <Link to={item.href} onClick={() => setIsOpen(false)}>
+                      {item.label}
+                    </Link>
                   </Button>
                 )
               )}
