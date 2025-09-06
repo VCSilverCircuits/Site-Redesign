@@ -43,7 +43,7 @@ const Index = () => {
     {
       icon: <Zap className="h-8 w-8" />,
       title: "Robot Performance",
-      description: "442 Point High Score",
+      description: "401 Point High Score",
       highlight: "Team Record",
     },
     {
