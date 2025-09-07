@@ -49,7 +49,7 @@ const Navigation = () => {
             <div className="text-sm text-muted-foreground hidden sm:block">#16158</div>
           </Link>
 
-=          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) =>
               item.label === "Robots" ? (
                 <DropdownMenu key={item.href}>
@@ -97,7 +97,7 @@ const Navigation = () => {
             )}
           </div>
 
-=          <Button
+          <Button
             variant="ghost"
             size="icon"
             className="md:hidden"
@@ -107,7 +107,7 @@ const Navigation = () => {
           </Button>
         </div>
 
-=        {isOpen && (
+        {isOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) =>
