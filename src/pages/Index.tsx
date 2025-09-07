@@ -134,7 +134,16 @@ const Index = () => {
               >
                 VC Silver Circuits
               </motion.h1>
-
+              <motion.p
+                className="text-lg sm:text-2xl font-medium italic text-accent mb-4"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ delay: 0.25, duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                "Prospecting for potential, mining for innovation."
+              </motion.p>
               <motion.p
                 className="text-lg sm:text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto"
                 variants={fadeUp}
@@ -193,18 +202,18 @@ const Index = () => {
                   Our Mission
                 </h2>
                 <p className="text-xl leading-relaxed text-muted-foreground mb-12">
-                  We strive to share our knowledge and passions with others, to
-                  create a future of STEM excellence. This season, our focus is
-                  clear:{" "}
+                  We strive to share our knowledge and passion with others, helping to
+                  build a stronger future in STEM. This season, our focus is on the{" "}
                   <span className="text-primary font-semibold">
-                    win at the Nevada State Championship
+                    Nevada State Championship
                   </span>{" "}
-                  and aim for the{" "}
+                  with hopes of reaching the{" "}
                   <span className="text-accent font-semibold">
                     Worldwide Championship
                   </span>
-                  . Our goal isn't just to participate but to excel, reaching
-                  the finals to showcase our team's dedication and talent.
+                  . Just as important, we’re working to raise the level of robotics in
+                  Nevada, which involves encouraging growth, teamwork, and innovation across the
+                  community.
                 </p>
               </div>
             </div>
