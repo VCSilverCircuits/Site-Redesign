@@ -26,7 +26,7 @@ const Robot = () => {
     <div className="min-h-screen pt-20 tech-fade-in">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
-          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: Center Stage</h1>
+          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Robot: Invictus</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Built for the 2023–2024 Centerstage season, this robot showcases advanced intake, scoring, and endgame suspension capabilities.
           </p>

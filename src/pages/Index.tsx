@@ -264,7 +264,7 @@ const Index = () => {
           >
             <div className="container mx-auto px-4">
               <h2 className="text-4xl font-bold text-center mb-16 text-primary">
-                Team in Action
+                Our Team in Action
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {[teamPhoto2, teamPhoto1].map((photo, i) => (
@@ -300,12 +300,13 @@ const Index = () => {
               <div className="max-w-4xl mx-auto text-center">
                 <Heart className="h-16 w-16 text-accent mx-auto mb-8" />
                 <h2 className="text-4xl font-bold mb-8 text-primary">
-                  Support Our Journey
+                  Support Our Journey or Ask us Anything!
                 </h2>
                 <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
                   Help us continue our robotics journey and reach new heights.
                   Your support helps us compete, learn, and inspire the next
-                  generation of STEM leaders.
+                  generation of STEM leaders. Have questions? We're here to
+                  connect!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button variant="hero" size="lg" asChild>

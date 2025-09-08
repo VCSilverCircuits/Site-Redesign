@@ -184,6 +184,17 @@ const Robot = () => {
                 </div>
                 <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
                   <div>
+                    <h3 className="font-semibold text-foreground">Undertow V2 High Score</h3>
+                  </div>
+                  <Button variant="hero" asChild>
+                    <a href="https://www.youtube.com/watch?v=Mhzd73riopc" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      Watch on YouTube
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+                <div className="flex items-center justify-between p-4 bg-card/50 rounded-xl border border-border">
+                  <div>
                     <h3 className="font-semibold text-foreground">Team YouTube Channel</h3>
                     <p className="text-sm text-muted-foreground">More videos and robot demonstrations</p>
                   </div>

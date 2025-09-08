@@ -10,7 +10,7 @@ const Events = () => {
   const [latestEvent, setLatestEvent] = useState<any>(null);
 
   const achievements = [
-    { icon: <Trophy className="h-5 w-5" />, label: "1st Place", description: "Jemison Division out of 65 teams" },
+    { icon: <Trophy className="h-5 w-5" />, label: "3rd Place", description: "Jemison Division out of 65 teams" },
     { icon: <Trophy className="h-5 w-5" />, label: "29th Overall", description: "Entire World Championship event" },
     { icon: <Users className="h-5 w-5" />, label: "Team Growth", description: "Immense learning and development" }
   ];

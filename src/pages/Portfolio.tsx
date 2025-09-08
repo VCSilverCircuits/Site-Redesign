@@ -39,7 +39,6 @@ const seasons = [
             auto: "33.64",
             teleop: "138.46",
             endgame: "23.18",
-            bestOPR: "172.10",
             rankPercentile: {
                 totalNP: "168th / 97.81%",
                 auto: "384th / 94.99%",
@@ -61,7 +60,6 @@ const seasons = [
             auto: "42.11",
             teleop: "51.50",
             endgame: "24.72",
-            bestOPR: "113.96",
             rankPercentile: {
                 totalNP: "319th / 95.23%",
                 auto: "474th / 92.90%",
@@ -83,7 +81,6 @@ const seasons = [
             auto: "50.30",
             teleop: "77.53",
             endgame: "40.88",
-            bestOPR: "154.07",
             rankPercentile: {
                 totalNP: "13th / 99.79%",
                 auto: "4th / 99.95%",
@@ -104,7 +101,6 @@ const seasons = [
             auto: "24.79",
             teleop: "48.50",
             endgame: "57.90",
-            bestOPR: "122.49",
             rankPercentile: {
                 totalNP: "184th / 95.84%",
                 auto: "1030th / 76.63%",
@@ -121,7 +117,7 @@ const TeamPortfolio: FC = () => {
     return (
         <div className="min-h-screen flex flex-col bg-black text-white">
             <div className="container mx-auto px-4 pt-20 pb-12 flex-1">
-                <h1 className="text-4xl font-bold text-center mb-12">Team History</h1>
+                <h1 className="text-4xl font-bold text-center mb-16 mt-10">Team History</h1>
 
                 {seasons.map((season, index) => (
                     <motion.section
@@ -147,17 +143,30 @@ const TeamPortfolio: FC = () => {
                         {season.quickStats && (
                             <div className="mb-6 p-4 rounded-lg border border-gray-700 bg-gradient-to-r from-gray-800 to-gray-900 shadow-inner">
                                 <h3 className="text-xl font-semibold mb-4 text-center">Quick Stats</h3>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-gray-200">
-                                    {Object.entries({Total: season.quickStats.totalNP, Auto: season.quickStats.auto, Teleop: season.quickStats.teleop, Endgame: season.quickStats.endgame, 'Best OPR': season.quickStats.bestOPR}).map(([label, value], idx) => (
-                                        <div key={idx} className="bg-gray-700 rounded-lg p-3 flex flex-col items-center justify-center hover:bg-gray-600 transition-colors duration-200">
-                                            <p className="font-medium mb-1 text-center">{label}</p>
-                                            <p className="text-lg font-bold mb-1 text-center">{value}</p>
-                                            {season.quickStats.rankPercentile[label.toLowerCase()] && <p className="text-sm text-gray-300 text-center">{season.quickStats.rankPercentile[label.toLowerCase()]}</p>}
-                                        </div>
-                                    ))}
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-gray-200">
+                                    {[
+                                        { label: "Total", key: "totalNP" },
+                                        { label: "Auto", key: "auto" },
+                                        { label: "Teleop", key: "teleop" },
+                                        { label: "Endgame", key: "endgame" },
+                                    ].map(({ label, key }, idx) => {
+                                        const value = season.quickStats[key];
+                                        const rank = season.quickStats.rankPercentile[key]; // e.g., "384th / 94.99%"
+                                        return (
+                                            <div
+                                                key={idx}
+                                                className="bg-gray-700 rounded-lg p-3 flex flex-col items-center justify-center hover:bg-gray-600 transition-colors duration-200"
+                                            >
+                                                <p className="font-medium mb-1 text-center">{label}</p>
+                                                <p className="text-lg font-bold mb-1 text-center">{value}</p>
+                                                {rank && <p className="text-sm text-gray-300 text-center">{rank}</p>}
+                                            </div>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         )}
+
 
                         <div>
                             <button
