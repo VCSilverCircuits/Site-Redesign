@@ -9,7 +9,10 @@ import robotV11Image from "@/assets/RobotPhotos/ITDRobot-V1-1.jpg";
 import robotV12Image from "@/assets/RobotPhotos/ITDRobot-V1-2.jpg";
 const Robot = () => {
   const stats = [
-    { label: "OPR", value: "172", description: "Lobster Cup Invitational" },
+    { label: "Overall OPR", value: "172.10", description: "" },
+    { label: "TeleOP OPR", value: "138.46", description: "" },
+    { label: "Auto OPR", value: "33.64", description: "" },
+    { label: "Endgame", value: "23.18", description: "" },
     { label: "High Score", value: "402", description: "World Championship" },
     { label: "Samples Auto", value: "6+0", description: "Sample Auto Performance" },
     { label: "Specimens Auto", value: "0+5", description: "Specimen Auto Performance" },

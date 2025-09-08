@@ -8,6 +8,10 @@ import robot2Image from "@/assets/RobotPhotos/centerstage-robot-2.png";
 
 const Robot = () => {
   const stats = [
+    { label: "Overall OPR", value: "113.96", description: "" },
+    { label: "TeleOP OPR", value: "51.50", description: "" },
+    { label: "Auto OPR", value: "42.11", description: "" },
+    { label: "Endgame", value: "24.72", description: "" },
     { label: "Intake Capacity", value: "2 Pixels", description: "Can ingest 2 pixels at a time" },
     { label: "Slide Extension", value: "1.2 m", description: "Horizontal linear slide reach" },
     { label: "Drone Launch Height", value: "1.22 m", description: "Vertical drone launch capability" },

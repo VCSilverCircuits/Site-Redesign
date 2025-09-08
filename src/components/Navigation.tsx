@@ -82,7 +82,7 @@ const Navigation = () => {
                       <Link to="/team">Our Members</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <Link to="/portfolio">Portfolio</Link>
+                      <Link to="/portfolio">Past Seasons</Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link to="/sponsors">Sponsors</Link>
@@ -151,7 +151,7 @@ const Navigation = () => {
                       </Button>
                       <Button variant="ghost" className="justify-start" asChild>
                         <Link to="/portfolio" onClick={() => setIsOpen(false)}>
-                          Portfolio
+                          Past Seasons
                         </Link>
                       </Button>
                       <Button variant="ghost" className="justify-start" asChild>

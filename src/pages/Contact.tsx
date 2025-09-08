@@ -53,7 +53,7 @@ const Contact = () => {
         <div className="text-center mb-16 circuit-bg p-12 rounded-2xl">
           <h1 className="text-5xl font-bold mb-6 gradient-text">Get In Touch</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Have questions about our team? Want to support our robotics journey? Need help or advice on FTC? We'd love to hear from you!
+            Have questions about our team? Want to support our robotics journey? Need help or advice on FTC or FLL? We'd love to hear from you!
           </p>
         </div>
 
@@ -104,13 +104,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-accent mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-foreground">Mailing Address</h3>
-                    <p className="text-muted-foreground">PO Box 46<br />Virginia City, NV 89440</p>
-                  </div>
-                </div>
+
                 <div className="flex items-start space-x-4">
                   <Phone className="h-6 w-6 text-accent mt-1" />
                   <div>

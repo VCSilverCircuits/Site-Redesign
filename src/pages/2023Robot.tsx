@@ -8,6 +8,10 @@ import powerPlayImage2 from "@/assets/RobotPhotos/power-play-2.jpg";
 
 const PowerPlayRobot = () => {
   const stats = [
+    { label: "Overall OPR", value: "154.07", description: "" },
+    { label: "TeleOP OPR", value: "77.53", description: "" },
+    { label: "Auto OPR", value: "50.30", description: "" },
+    { label: "Endgame", value: "40.88", description: "" },
     { label: "High Score (No Penalties)", value: "262", description: "Achieved during Power Play season" },
     { label: "High Score (Solo)", value: "221", description: "Achieved during Power Play season" },
     { label: "Autonomous", value: "5+1 Cones + Park", description: "High autonomous score of 80 points solo" },
@@ -41,7 +45,6 @@ const PowerPlayRobot = () => {
             ))}
           </div>
         </section>
-
         <section className="mb-16">
           <Card className="bg-gradient-tech border-border hover:border-primary/50 transition-all duration-300 hover:shadow-tech">
             <CardHeader>

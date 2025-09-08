@@ -49,7 +49,7 @@ const Index = () => {
     {
       icon: <Users className="h-8 w-8" />,
       title: "Team Spirit",
-      description: "7 Strong and Dedicated Team Members",
+      description: "13 Strong and Dedicated Team Members",
       highlight: "Strong",
     },
   ];
@@ -164,7 +164,7 @@ const Index = () => {
                 viewport={{ once: true }}
               >
                 We are the VC Silver Circuits, a team participating in the FIRST
-                Tech Challenge program. Our team consists of seven team members,
+                Tech Challenge program. Our team consists of eleven team members,
                 two coaches, and one mentor, dedicated to pursuing knowledge in
                 robotics and engineering. We come from a small town in rural
                 Nevada called Virginia City in Storey County, Nevada, but our passion is big.
@@ -202,18 +202,10 @@ const Index = () => {
                   Our Mission
                 </h2>
                 <p className="text-xl leading-relaxed text-muted-foreground mb-12">
-                  We strive to share our knowledge and passion with others, helping to
-                  build a stronger future in STEM. This season, our focus is on the{" "}
-                  <span className="text-primary font-semibold">
-                    Nevada State Championship
-                  </span>{" "}
-                  with hopes of reaching the{" "}
-                  <span className="text-accent font-semibold">
-                    Worldwide Championship
-                  </span>
-                  . Just as important, we’re working to raise the level of robotics in
-                  Nevada, which involves encouraging growth, teamwork, and innovation across the
-                  community.
+                  Our mission is to <span className="text-primary font-semibold">raise the level of robotics in Nevada</span> by sharing our knowledge and passion, helping others grow in STEM.
+                  Through collaboration and mentorship, we aim to strengthen our community first.
+                  As a result of this dedication, we strive to <span className="text-accent font-semibold">excel at the Nevada State Championship</span> and earn the opportunity to compete at the <span className="text-accent font-semibold">Worldwide Championship</span>,
+                  showcasing the talent and commitment of our team.
                 </p>
               </div>
             </div>

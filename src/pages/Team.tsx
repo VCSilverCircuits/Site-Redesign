@@ -57,7 +57,7 @@ const Team = () => {
     {
       name: "Coach Michelle",
       role: "Head Coach",
-      bio: "Hello! My name is Michelle. This will be my sixth season coaching this team. Becoming a robotics coach was never on my bucket list, but over the years, it has become a way of life for my family and I. I cherish the friendships that I have made and enjoy seeing the \"ah-ha\" moments these kids have had over the years. I love the values the FIRST program teaches and the knowledge the kids have gained. When I am not coaching this team, I am running the office side of my husband's and my business or homeschooling my children. I enjoy all things outdoors: from hiking, paddleboarding, and snowmobiling to dirt bike riding. I am always game for an adventure."
+      bio: "Hello! My name is Michelle. This will be my sixth season coaching this team. Becoming a robotics coach was never on my bucket list, but over the years, it has become a way of life for my family and I. I cherish the friendships that I have made and enjoy seeing the \"ah-ha\" moments these kids have had over the years. I love the values the FIRST program teaches and the knowledge the kids have gained. When I am not coaching this team, I am running the office side of my husband's and my business or homeschooling our children. I enjoy all things outdoors: from hiking, paddleboarding, and snowmobiling to dirt bike riding. I am always game for an adventure."
     },
     {
       name: "Coach Lisanne",

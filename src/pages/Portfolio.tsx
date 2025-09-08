@@ -24,41 +24,94 @@ import img2024_4 from "@/assets/Gallery/2024/4.webp";
 
 const seasons = [
     {
-        title: "2024–2025 Season",
+        title: "2024–2025 Season INTO THE DEEP",
         images: [img2024_1, img2024_2, img2024_3, img2024_4],
         achievements: [
-            "Lobster Cup International – Division Winning Alliance Captain, Finalist Alliance Captain",
-            "Nevada Championship – 1st place (quals), Inspire Award Winner, Finalist Alliance Captain",
-            "NV Northern League Tournament – 1st place (quals), Dean's List Semifinalist (Tucker Knight), Inspire Award Winner, Winning Alliance Captain",
-            "NV Northern League Meets 1N–6N – Multiple qualifications, eliminations, and placements; top performances in all events",
-            "NV Northern Scrimmage – 1st place (quals), top scores in qualification matches",
             "FIRST World Championship – Jemison Division – 29th place (quals), Winning Alliance 2nd Pick",
+            "Lobster Cup International – Division Winning Alliance Captain, Finalist Alliance Captain",
+            "NV Northern League Tournament – 1st place (quals), Dean's List Semifinalist (Tucker Knight), Inspire Award Winner, Winning Alliance Captain",
+            "Nevada Championship – 1st place (quals), Inspire Award Winner, Finalist Alliance Captain",
+            "NV Northern League Meets 1N–6N – Multiple qualifications, eliminations, and placements; top performances in most events",
+            "NV Northern Scrimmage – 1st place (quals), top scores in qualification matches",
         ],
+        quickStats: {
+            totalNP: "172.10",
+            auto: "33.64",
+            teleop: "138.46",
+            endgame: "23.18",
+            bestOPR: "172.10",
+            rankPercentile: {
+                totalNP: "168th / 97.81%",
+                auto: "384th / 94.99%",
+                teleop: "150th / 98.05%",
+                endgame: "146th / 98.10%",
+            },
+        },
     },
     {
-        title: "2023–2024 Season",
+        title: "2023–2024 Season CENTERSTAGE",
         images: [img2023_1, img2023_2, img2023_3, img2023_4],
         achievements: [
+            "FIRST World Championship - Ochoa Division Qualified - 16th place (quals)",
             "NV Northern League Tournament: Inspire Award, Promote Award, Winning Alliance 1st pick, 2 Dean’s List Semi-Finalists",
             "Nevada Championship: Inspire Award, Semi-Final Alliance Captain, Dean’s List Finalist",
         ],
+        quickStats: {
+            totalNP: "113.96",
+            auto: "42.11",
+            teleop: "51.50",
+            endgame: "24.72",
+            bestOPR: "113.96",
+            rankPercentile: {
+                totalNP: "319th / 95.23%",
+                auto: "474th / 92.90%",
+                teleop: "168th / 97.49%",
+                endgame: "1924th / 71.14%",
+            },
+        },
     },
     {
-        title: "2022–2023 Season",
+        title: "2022–2023 Season POWER PLAY",
         images: [img2022_1, img2022_2, img2022_3, img2022_4],
         achievements: [
-            "NV Northern League Tournament: 2 Dean’s List Semi-Finalists, Inspire Award 2nd Place, Think Award, Winning Alliance – Captain",
-            "Nevada Championship: Compass Award 2nd Place, Innovate Award sponsored by Raytheon Technologies 2nd Place, Inspire Award, Promote Award 2nd Place, Think Award 2nd Place, Winning Alliance – Captain",
             "FIRST Championship – Houston – World Championship – Edison Division: Motivate Award",
+            "Nevada Championship: Compass Award 2nd Place, Innovate Award sponsored by Raytheon Technologies 2nd Place, Inspire Award, Promote Award 2nd Place, Think Award 2nd Place, Winning Alliance – Captain",
+            "NV Northern League Tournament: 2 Dean’s List Semi-Finalists, Inspire Award 2nd Place, Think Award, Winning Alliance – Captain",
         ],
+        quickStats: {
+            totalNP: "154.07",
+            auto: "50.30",
+            teleop: "77.53",
+            endgame: "40.88",
+            bestOPR: "154.07",
+            rankPercentile: {
+                totalNP: "13th / 99.79%",
+                auto: "4th / 99.95%",
+                teleop: "28th / 99.52%",
+                endgame: "87th / 98.48%",
+            },
+        },
     },
     {
-        title: "2021–2022 Season",
+        title: "2021–2022 Season FREIGHT FRENZY",
         images: [img2021_1, img2021_2, img2021_3, img2021_4],
         achievements: [
-            "NV Northern League Tournament: Inspire Award 2nd Place, Think Award, Winning Alliance – Captain",
             "Nevada State Championship: Finalist Alliance – Captain, Inspire Award, Think Award 3rd Place",
+            "NV Northern League Tournament: Inspire Award 2nd Place, Think Award, Winning Alliance – Captain",
         ],
+        quickStats: {
+            totalNP: "122.49",
+            auto: "24.79",
+            teleop: "48.50",
+            endgame: "57.90",
+            bestOPR: "122.49",
+            rankPercentile: {
+                totalNP: "184th / 95.84%",
+                auto: "1030th / 76.63%",
+                teleop: "207th / 95.32%",
+                endgame: "66th / 98.52%",
+            },
+        },
     },
 ];
 
@@ -68,7 +121,7 @@ const TeamPortfolio: FC = () => {
     return (
         <div className="min-h-screen flex flex-col bg-black text-white">
             <div className="container mx-auto px-4 pt-20 pb-12 flex-1">
-                <h1 className="text-4xl font-bold text-center mb-12">Team Portfolio</h1>
+                <h1 className="text-4xl font-bold text-center mb-12">Team History</h1>
 
                 {seasons.map((season, index) => (
                     <motion.section
@@ -90,6 +143,21 @@ const TeamPortfolio: FC = () => {
                                 />
                             ))}
                         </div>
+
+                        {season.quickStats && (
+                            <div className="mb-6 p-4 rounded-lg border border-gray-700 bg-gradient-to-r from-gray-800 to-gray-900 shadow-inner">
+                                <h3 className="text-xl font-semibold mb-4 text-center">Quick Stats</h3>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-gray-200">
+                                    {Object.entries({Total: season.quickStats.totalNP, Auto: season.quickStats.auto, Teleop: season.quickStats.teleop, Endgame: season.quickStats.endgame, 'Best OPR': season.quickStats.bestOPR}).map(([label, value], idx) => (
+                                        <div key={idx} className="bg-gray-700 rounded-lg p-3 flex flex-col items-center justify-center hover:bg-gray-600 transition-colors duration-200">
+                                            <p className="font-medium mb-1 text-center">{label}</p>
+                                            <p className="text-lg font-bold mb-1 text-center">{value}</p>
+                                            {season.quickStats.rankPercentile[label.toLowerCase()] && <p className="text-sm text-gray-300 text-center">{season.quickStats.rankPercentile[label.toLowerCase()]}</p>}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
 
                         <div>
                             <button
