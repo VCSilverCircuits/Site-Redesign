@@ -62,7 +62,7 @@ const Team = () => {
     {
       name: "Coach Lisanne",
       role: "Assistant Coach",
-      bio: "No bio available at this time."
+      bio: "Hello! my name is Lisanne. This will be my 3rd season with the VC Silver Circuits, and my first season in the capacity of an assistant coach. I have loved watching our team’s creativity and perseverance through all stages of every season. I have been in education as a teacher, a substitute and a parent since 2001. I have loved watching the team learn and try new things and take on different roles each season. In my spare time I love to garden, read, run and go on vacations."
     },
     {
       name: "Mentor Rogan",
